@@ -1,0 +1,57 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{cmap}					% поиск в PDF
+\usepackage{mathtext} 				% русские буквы в формулах
+\usepackage[T2A]{fontenc}			% кодировка
+\usepackage[utf8]{inputenc}			% кодировка исходного текста
+\usepackage[english,russian]{babel}	% локализация и переносы
+
+% Дополнительная работа с математикой
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} % AMS
+\usepackage{icomma} % "Умная" запятая
+
+%% Шрифты
+\usepackage{euscript}	 % Шрифт Евклид
+\usepackage{mathrsfs}    % Красивый матшрифт
+
+%% Перенос знаков в формулах (по Львовскому)
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}
+{\hbox{$\mathsurround=0pt #1$}}{}}
+
+% Работа с таблицами
+\usepackage{graphicx}
+\usepackage[table,xcdraw]{xcolor}
+
+%%% Заголовок
+\author{Hun Fauser}
+\title{Таблица умножения}
+\date{\today}
+
+\begin{document} % Конец преамбулы, начало текста.
+
+\maketitle
+
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[h]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|
+>{\columncolor[HTML]{3166FF}}c |c|c|c|c|c|c|c|c|}
+\hline
+\cellcolor[HTML]{FFFFFF}{\color[HTML]{FFFFFF} } & \cellcolor[HTML]{3166FF}{\color[HTML]{FFFFFF} \textbf{2}} & \cellcolor[HTML]{3166FF}{\color[HTML]{FFFFFF} \textbf{3}} & \cellcolor[HTML]{3166FF}{\color[HTML]{FFFFFF} \textbf{4}} & \cellcolor[HTML]{3166FF}{\color[HTML]{FFFFFF} \textbf{5}} & \cellcolor[HTML]{3166FF}{\color[HTML]{FFFFFF} \textbf{6}} & \cellcolor[HTML]{3166FF}{\color[HTML]{FFFFFF} \textbf{7}} & \cellcolor[HTML]{3166FF}{\color[HTML]{FFFFFF} \textbf{8}} & \cellcolor[HTML]{3166FF}{\color[HTML]{FFFFFF} \textbf{9}} \\ \hline
+{\color[HTML]{FFFFFF} \textbf{2}} & {\color[HTML]{333333} 4} & {\color[HTML]{333333} 6} & {\color[HTML]{333333} 8} & {\color[HTML]{333333} 10} & {\color[HTML]{333333} 12} & {\color[HTML]{333333} 14} & {\color[HTML]{333333} 16} & {\color[HTML]{333333} 18} \\ \hline
+{\color[HTML]{FFFFFF} \textbf{3}} & {\color[HTML]{333333} 6} & {\color[HTML]{333333} 9} & {\color[HTML]{333333} 12} & {\color[HTML]{333333} 15} & {\color[HTML]{333333} 18} & {\color[HTML]{333333} 21} & {\color[HTML]{333333} 24} & {\color[HTML]{333333} 27} \\ \hline
+{\color[HTML]{FFFFFF} \textbf{4}} & {\color[HTML]{333333} 8} & {\color[HTML]{333333} 12} & {\color[HTML]{333333} 16} & {\color[HTML]{333333} 20} & {\color[HTML]{333333} 24} & {\color[HTML]{333333} 28} & {\color[HTML]{333333} 32} & {\color[HTML]{333333} 36} \\ \hline
+{\color[HTML]{FFFFFF} \textbf{5}} & {\color[HTML]{333333} 10} & {\color[HTML]{333333} 15} & {\color[HTML]{333333} 20} & {\color[HTML]{333333} 25} & {\color[HTML]{333333} 30} & {\color[HTML]{333333} 35} & {\color[HTML]{333333} 40} & {\color[HTML]{333333} 45} \\ \hline
+{\color[HTML]{FFFFFF} \textbf{6}} & {\color[HTML]{333333} 12} & {\color[HTML]{333333} 18} & {\color[HTML]{333333} 24} & {\color[HTML]{333333} 30} & {\color[HTML]{333333} 36} & {\color[HTML]{333333} 42} & {\color[HTML]{333333} 48} & {\color[HTML]{333333} 54} \\ \hline
+{\color[HTML]{FFFFFF} \textbf{7}} & {\color[HTML]{333333} 14} & {\color[HTML]{333333} 21} & {\color[HTML]{333333} 28} & {\color[HTML]{333333} 35} & {\color[HTML]{333333} 42} & {\color[HTML]{333333} 49} & {\color[HTML]{333333} 56} & {\color[HTML]{333333} 63} \\ \hline
+{\color[HTML]{FFFFFF} \textbf{8}} & {\color[HTML]{333333} 16} & {\color[HTML]{333333} 24} & {\color[HTML]{333333} 32} & {\color[HTML]{333333} 40} & {\color[HTML]{333333} 48} & {\color[HTML]{333333} 56} & {\color[HTML]{333333} 64} & {\color[HTML]{333333} 72} \\ \hline
+{\color[HTML]{FFFFFF} \textbf{9}} & {\color[HTML]{333333} 18} & {\color[HTML]{333333} 27} & {\color[HTML]{333333} 36} & {\color[HTML]{333333} 45} & {\color[HTML]{333333} 54} & {\color[HTML]{333333} 63} & {\color[HTML]{333333} 72} & {\color[HTML]{333333} 81} \\ \hline
+\end{tabular}
+}
+\end{table}
+
+\end{document} % Конец текста.

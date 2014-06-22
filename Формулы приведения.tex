@@ -1,0 +1,48 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{cmap}					% поиск в PDF
+\usepackage{mathtext} 				% русские буквы в формулах
+\usepackage[T2A]{fontenc}			% кодировка
+\usepackage[utf8]{inputenc}			% кодировка исходного текста
+\usepackage[english,russian]{babel}	% локализация и переносы
+
+% Дополнительная работа с математикой
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} % AMS
+\usepackage{icomma} % "Умная" запятая
+
+%% Шрифты
+\usepackage{euscript}	 % Шрифт Евклид
+\usepackage{mathrsfs}    % Красивый матшрифт
+
+%% Перенос знаков в формулах (по Львовскому)
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}
+{\hbox{$\mathsurround=0pt #1$}}{}}
+
+% Работа с таблицами
+\usepackage{graphicx}
+\usepackage[table,xcdraw]{xcolor}
+
+%%% Заголовок
+\author{Hun Fauser}
+\title{Формулы приведения}
+\date{\today}
+
+\begin{document} % Конец преамбулы, начало текста.
+
+\maketitle
+
+\begin{table}[h]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|r|r|r|r|r|r|r|r|r|}
+\hline &&&&&&&&\\
+ & $\frac{\pi}{2} - \alpha$ & $\frac{\pi}{2} + \alpha$ & $\pi - \alpha$ & $\pi + \alpha$ & $\frac{3\pi}{2} - \alpha$ & $\frac{3\pi}{2} + \alpha$ & $2\pi - \alpha$ & $2\pi + \alpha$ \\ &&&&&&&&\\ \hline &&&&&&&&\\
+$\sin\alpha$ & $\cos\alpha$ & $\cos\alpha$ & $\sin\alpha$ & $-\sin\alpha$ & $-\cos\alpha$ & $-\cos\alpha$ & $-\sin\alpha$ & $\sin\alpha$ \\ &&&&&&&&\\ \hline &&&&&&&&\\
+$\cos\alpha$ & $\sin\alpha$ & $-\sin\alpha$ & $-\cos\alpha$ & $-\cos\alpha$ & $-\sin\alpha$ & $\sin\alpha$ & $\cos\alpha$ & $\cos\alpha$ \\ &&&&&&&&\\ \hline &&&&&&&&\\
+$\tg\alpha$ & $\ctg\alpha$ & $-\ctg\alpha$ & $-\tg\alpha$ & $\ctg\alpha$ & $\ctg\alpha$ & $-\ctg\alpha$ & $-\tg\alpha$ & $\tg\alpha$ \\ &&&&&&&&\\ \hline &&&&&&&&\\
+$\ctg\alpha$ & $\tg\alpha$ & $-\tg\alpha$ & $-\ctg\alpha$ & $\ctg\alpha$ & $\tg\alpha$ & $-\tg\alpha$ & $-\ctg\alpha$ & $\ctg\alpha$ \\ &&&&&&&&\\ \hline
+\end{tabular}
+}
+\end{table}
+
+\end{document} % Конец текста.

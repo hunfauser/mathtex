@@ -1,0 +1,109 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{cmap}					% поиск в PDF
+\usepackage{mathtext} 				% русские буквы в формулах
+\usepackage[T2A]{fontenc}			% кодировка
+\usepackage[utf8]{inputenc}			% кодировка исходного текста
+\usepackage[english,russian]{babel}	% локализация и переносы
+
+% Дополнительная работа с математикой
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} % AMS
+\usepackage{icomma} % "Умная" запятая
+
+%% Шрифты
+\usepackage{euscript}	 % Шрифт Евклид
+\usepackage{mathrsfs}    % Красивый матшрифт
+
+%% Перенос знаков в формулах (по Львовскому)
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}
+{\hbox{$\mathsurround=0pt #1$}}{}}
+
+%%% Заголовок
+\author{Hun Fauser}
+\title{Математическая шпаргалка}
+\date{\today}
+
+\begin{document} % Конец преамбулы, начало текста.
+
+\maketitle
+
+\section{Формулы сокращенного умножения}
+
+\begin{align*}
+(a + b)^2 &= a^2 + 2ab + b^2 \\
+(a - b)^2 &= a^2 - 2ab + b^2 \\
+a^2 - b^2 &= (a - b)(a + b) \\
+a^3 - b^3 &= (a - b)(a^2 + ab + b^2) \\
+a^3 + b^3 &= (a + b)(a^2 - ab + b^2) \\
+(a + b)^3 &= a^3 + 3a^2b + 3ab^2 + b^3 \\
+(a - b)^3 &= a^3 - 3a^2b + 3ab^2 - b^3
+\end{align*}
+
+\section{Свойства степеней и корней}
+
+\begin{align*}
+a^0 &= 1 ~(a \ne 0) \\
+a^{-n} &= 1/a^n ~(a > 0, n ~\varepsilon ~Q) \\
+a^n \times a^m &= a^{n + m} \\
+\left(\frac{a^n}{a^m}\right) &= a^{n - m} (a \ne 0) \\
+(a^n)^m &= a^{n \times m} \\
+(ab)^n &= a^nb^n \\
+\left(\frac{a}{b}\right)^n &= \frac{a^n}{b^n} \\
+\sqrt{nm} &= \sqrt{n} \times \sqrt{m} \\
+\sqrt\frac{a}{b} &= \frac{\sqrt{a}}{\sqrt{b}} \\
+\left( \sqrt[m]a \right)^n &= \sqrt[m]{a^n}
+\end{align*}
+
+\section{Арифметическая прогрессия}
+
+\begin{align*}
+a_{n} &= a_{n-1} + d \\
+a_{n} &= a_{1} + d(n - 1) \\
+a_{n} &= \frac{a_{n - 1} + a_{n + 1}}{2} 
+\end{align*}
+
+\subsection{Формула разности арифметической прогрессии}
+
+\[ d = a_{n+1} - a_{n} \]
+
+\subsection{Формула суммы n-первых членов арифметической прогрессии}
+
+\begin{align*}
+S_{n} &= \frac{2a_{1} + (n - 1)d}{2} \times n \\ \\
+S_{n} &= \frac{a_{1} + a_{n}}{2} \times n
+\end{align*}
+
+\section{Геометрическая прогрессия}
+
+\begin{align*}
+b_{n+1} &= b_{n} \times q, где ~n ~\varepsilon ~N \\
+b_{n} &= b_{1} \times q^{n-1} - n-ый ~член ~прогрессии \\
+\frac{b_{n}}{b_{n - 1}} &= \frac{b_{n + 1}}{b_{n}}
+\end{align*}
+
+\subsection{Сумма n-ых членов}
+
+\begin{align*}
+S_{n} &= \frac{(b_{n}q - b_{1})}{q-1} \\ \\
+S_{n} &= \frac{b_{1}(q^n - 1)}{q-1}
+\end{align*}
+
+% \[  \]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document} % Конец текста.

@@ -1,0 +1,75 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{cmap}					% поиск в PDF
+\usepackage{mathtext} 				% русские буквы в формулах
+\usepackage[T2A]{fontenc}			% кодировка
+\usepackage[utf8]{inputenc}			% кодировка исходного текста
+\usepackage[english,russian]{babel}	% локализация и переносы
+
+% Дополнительная работа с математикой
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} % AMS
+\usepackage{icomma} % "Умная" запятая
+
+%% Шрифты
+\usepackage{euscript}	 % Шрифт Евклид
+\usepackage{mathrsfs}    % Красивый матшрифт
+
+%% Перенос знаков в формулах (по Львовскому)
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}
+{\hbox{$\mathsurround=0pt #1$}}{}}
+
+% Работа с таблицами
+\usepackage{graphicx}
+\usepackage[table,xcdraw]{xcolor}
+
+%%% Заголовок
+\author{Hun Fauser}
+\title{Тригонометрия}
+\date{\today}
+
+\begin{document} % Конец преамбулы, начало текста.
+
+\maketitle
+
+\section{Тригонометрические тождества}
+
+\begin{align*}
+\sin^2\alpha + \cos^2\alpha &= 1 \\
+\tg\alpha &= \frac{\sin\alpha}{\cos\alpha} \\ 
+\ctg\alpha &= \frac{\cos\alpha}{\sin\alpha} \\
+\tg\alpha \times \ctg\alpha &= 1 \\
+\tg^2\alpha + 1 &= \frac{1}{\cos^2\alpha} \\
+\ctg^2\alpha + 1 &= \frac{1}{\sin^2\alpha} \\
+\end{align*}
+
+\section{Формулы сложения тригонометричских функций}
+
+\begin{align*}
+\cos(\alpha - \beta) &= \cos\alpha \times \cos\beta + \sin\alpha \times \sin\beta \\
+\cos(\alpha + \beta) &= \cos\alpha \times \cos\beta - \sin\alpha \times \sin\beta \\
+\sin(\alpha - \beta) &= \sin\alpha \times \cos\beta - \cos\alpha \times \sin\beta \\
+\sin(\alpha + \beta) &= \sin\alpha \times \cos\beta + \cos\alpha \times \sin\beta \\
+\tg(\alpha + \beta) &= \frac{\tg\alpha + \tg\beta}{1 - \tg\alpha \times \tg\beta} \\
+\tg(\alpha - \beta) &= \frac{\tg\alpha - \tg\beta}{1 + \tg\alpha \times \tg\beta} \\
+\end{align*}
+
+\section{Сумма тригонометричских функций}
+
+\begin{align*}
+\sin\alpha + \sin\beta &= 2\sin\frac{a + b}{2} \times \cos\frac{a - b}{2} \\
+\sin\alpha - \sin\beta &= 2\sin\frac{a - b}{2} \times \cos\frac{a + b}{2} \\
+\cos\alpha + \cos\beta &= 2\cos\frac{a + b}{2} \times \cos\frac{a - b}{2} \\
+\cos\alpha - \cos\beta &= -2\sin\frac{a - b}{2} \times \sin\frac{a + b}{2} \\
+\end{align*}
+
+\section{Функции кратных углов}
+
+\begin{align*}
+\sin2\alpha &= 2\sin\alpha \times \cos\alpha \\
+\cos2\alpha &= \cos^2\alpha - \sin^2\alpha \\
+\cos2\alpha &= 1 - 2\sin^2\alpha \\
+\cos2\alpha &= 2\cos^2\alpha - 1 \\
+\tg2\alpha &= \frac{2\tg\alpha}{1 - \tg^2\alpha}
+\end{align*}
+
+\end{document} % Конец текста.

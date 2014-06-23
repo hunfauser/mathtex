@@ -1,5 +1,7 @@
 \documentclass[a4paper,12pt]{article}
 
+\renewcommand{\baselinestretch}{01.80} % расстояние между строками
+
 \usepackage{cmap}					% поиск в PDF
 \usepackage{mathtext} 				% русские буквы в формулах
 \usepackage[T2A]{fontenc}			% кодировка
@@ -35,7 +37,7 @@
 
 \begin{align*}
 \sin^2\alpha + \cos^2\alpha &= 1 \\
-\tg\alpha &= \frac{\sin\alpha}{\cos\alpha} \\ 
+\tg\alpha &= \frac{\sin\alpha}{\cos\alpha} \\
 \ctg\alpha &= \frac{\cos\alpha}{\sin\alpha} \\
 \tg\alpha \times \ctg\alpha &= 1 \\
 \tg^2\alpha + 1 &= \frac{1}{\cos^2\alpha} \\
@@ -70,6 +72,24 @@
 \cos2\alpha &= 1 - 2\sin^2\alpha \\
 \cos2\alpha &= 2\cos^2\alpha - 1 \\
 \tg2\alpha &= \frac{2\tg\alpha}{1 - \tg^2\alpha}
+\end{align*}
+
+\section{Еще что-то по тригонометрии}
+
+\begin{align*}
+\sin\alpha \times \sin\beta &= \frac{1}{2}(\cos(\alpha - \beta) - \cos(\alpha + \beta)) \\
+\cos\alpha \times \cos\beta &= \frac{1}{2}(\cos(\alpha - \beta) + \cos(\alpha + \beta)) \\
+\sin\alpha \times \cos\beta &= \frac{1}{2}(\sin(\alpha - \beta) + \sin(\alpha + \beta))
+\end{align*}
+
+\section{Формулы понижения степени}
+
+\begin{align*}
+\sin^2\alpha &= \frac{1 - \cos2\alpha}{2} \\
+\cos^2\alpha &= \frac{1 + \cos2\alpha}{2} \\
+\tg^2\alpha &= \frac{1 - \cos2\alpha}{1 + \cos2\alpha} \\
+\sin^3\alpha &= \frac{1}{4}(3\sin\alpha - \sin3\alpha) \\
+\cos^3\alpha &= \frac{1}{4}(\cos3\alpha + 3\cos\alpha)
 \end{align*}
 
 \end{document} % Конец текста.

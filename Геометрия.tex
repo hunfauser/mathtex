@@ -1,0 +1,187 @@
+\documentclass[a4paper,14pt]{article}
+
+\usepackage{cmap}					% поиск в PDF
+\usepackage{mathtext} 				% русские буквы в формулах
+\usepackage[T2A]{fontenc}			% кодировка
+\usepackage[utf8]{inputenc}			% кодировка исходного текста
+\usepackage[english,russian]{babel}	% локализация и переносы
+
+% Дополнительная работа с математикой
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} % AMS
+\usepackage{icomma}                                    % "Умная" запятая
+
+%% Шрифты
+\usepackage{euscript} % Шрифт Евклид
+\usepackage{mathrsfs} % Матшрифт
+
+%% Перенос знаков в формулах (по Львовскому)
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}
+{\hbox{$\mathsurround=0pt #1$}}{}}
+
+%%% Работа с картинками
+\usepackage{graphicx}              % Для вставки рисунков
+\usepackage{wrapfig}               % Обтекание рисунков текстом
+
+%%% Работа с таблицами
+\usepackage{array,tabularx,tabulary,booktabs} % Дополнительная работа с таблицами
+\usepackage{longtable}                        % Длинные таблицы
+\usepackage{multirow}                         % Слияние строк в таблице
+
+\usepackage{pgf,tikz} % Работа с графикой
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+
+\usepackage[]{geometry}
+
+\usetikzlibrary{arrows}
+\newcommand{\degre}{\ensuremath{^\circ}}
+
+%%% Заголовок
+\author{Hun Fauser}
+\title{Геометрия}
+\date{\today}
+
+\begin{document} % Конец преамбулы, начало текста.
+
+\maketitle
+
+\newpage
+\section{Площадь круга}
+
+\begin{figure}[h]
+\begin{center}
+	\begin{tikzpicture}
+		\draw (0, 0) circle (2.5);   % Нарисовать круг
+		\draw (0, -2.5) -- (0, 2.5); % Нарисовать вертикальную линию
+		\draw (0, 0) -- (2.5, 0);    % Нарисовать горизонтальную линию
+	\begin{scriptsize}
+		\draw (-0.25, -0.25) node {$D$};
+		\draw (1, -0.25) node {$r$};
+	\end{scriptsize}
+	\end{tikzpicture}
+	\caption{Зная диаметр или радиус круга, можно найти его площадь.}
+\end{center}
+\end{figure}
+
+\subsection{Обозначения}
+
+r = радиус круга \\
+R = диаметр \\
+$\pi \approx 3.14$
+
+\subsection{Площадь круга}
+
+$S = \pi r^2 = \frac{\pi}{4}D^2$
+
+\subsection{Периметр круга}
+
+$p = 2\pi r = \pi D$
+
+\newpage
+\section{Площадь прямоугольника}
+
+\begin{figure}[h]
+	\begin{center}
+\begin{tikzpicture}[auto]
+	\draw (0, 0) -- (0, 3); %(A, B)
+	\draw (0, 0) -- (5, 0); %(B, C)
+	\draw (5, 0) -- (5, 3); %(C, D)
+	\draw (5, 3) -- (0, 3); %(A, D)
+\begin{scriptsize}
+\draw (-0.25, 3.25) node {$A$};
+\draw (-0.25, -0.25) node {$B$};
+\draw (5.25, -0.25) node {$C$};
+\draw (5.25, 3.25) node {$D$};
+
+\draw (-0.25, 1.5) node {$a$};
+\draw (2.5, -0.25) node {$b$};
+\draw (5.25, 1.5) node {$c$};
+\draw (2.5, 3.25) node {$d$};
+\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+\end{figure}
+
+\subsection{Обозначения}
+
+b, d = длина прямоугольника \\
+a, c = ширина прямоугольника
+
+\subsection{Площадь прямоугольника}
+
+$S = ab$
+
+\newpage
+\section{Площадь эллипса}
+
+\begin{figure}[h]
+\begin{center}
+	\begin{tikzpicture}
+		\draw (0,0) ellipse (3cm and 2cm); % Нарисовать эллипс
+		\draw (0, 0) -- (0, 2);     	   % Нарисовать вертикальную линию
+		\draw (0, 0) -- (3, 0);    		   % Нарисовать горизонтальную линию
+		\draw[dashed] (-3, 0) -- (0, 0);   % Нарисовать горизонтальную пунктирную линию
+		\draw[dashed] (0, 0) -- (0, -2);   % Нарисовать вертикальную пунктирную линию
+	\begin{scriptsize}
+		\draw (1.5, -0.25) node {$R$};
+		\draw (-0.25, 1) node {$r$};
+	\end{scriptsize}
+	\end{tikzpicture}
+\end{center}
+\end{figure}
+
+\subsection{Обозначения}
+
+R = большая полуось \\
+r = малая полуось
+
+\subsection{Площадь прямоугольника}
+
+$S = \pi Rr$
+
+\newpage
+\section{Формула площади равнобедренной трапеции через стороны и угол}
+
+\begin{figure}[h]
+\begin{center}
+	\begin{tikzpicture}
+		\draw (0, 0) -- (5, 0);     %(B, C)
+		\draw (0, 0) -- (1, 2.5);   %(B, A)
+		\draw (1, 2.5) -- (4, 2.5); %(A, D)
+		\draw (4, 2.5) -- (5, 0);   %(D, C)
+	\begin{scriptsize}
+		\draw (0.75, 2.5) node {$A$};
+		\draw (-0.25, 0) node {$B$};
+		\draw (5.25, 0) node {$C$};
+		\draw (4.25, 2.5) node {$D$};
+		
+		\draw[fill=black] (0, 0) circle (1.5pt);
+		\draw[fill=black] (5, 0) circle (1.5pt);
+		\draw[fill=black] (1, 2.5) circle (1.5pt);
+		\draw[fill=black] (4, 2.5) circle (1.5pt);
+		
+		\draw (2.5, -0.25) node {$a$};
+		\draw (2.5, 2.75) node {$b$};
+		\draw (0.25, 1.25) node {$c$};
+		\draw (4.75, 1.25) node {$d$};
+		
+		\draw [shift={(1, 2.5)}] (0,0) -- (-111.5 : 0.5) arc (-111.5 : 0 : 0.5) -- cycle; % Угол А
+		\draw [shift={(4, 2.5)}] (0,0) -- (180 : 0.5) arc (185 : 290 : 0.5) -- cycle; % Угол D
+		
+		\draw [shift={(5.0,0.0)}] (111 : 0.65) arc (112 : 180 : 0.65); % Угол C
+		\draw [shift={(5.0,0.0)}] (112 : 0.55) arc (112 : 180 : 0.55); % Угол C
+		\draw [shift={(0.0,0.0)}] (0 : 0.65) arc (0 : 68 : 0.65);       % Угол D
+		\draw [shift={(0.0,0.0)}] (0 : 0.55) arc (0 : 68 : 0.55);       % Угол D
+	\end{scriptsize}
+	\end{tikzpicture}
+\end{center}
+\end{figure}
+
+\subsection{Обозначения}
+
+R = большая полуось \\
+r = малая полуось
+
+\subsection{Площадь прямоугольника}
+
+\end{document} % Конец текста.

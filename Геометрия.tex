@@ -266,4 +266,320 @@ $\alpha, \beta$ - углы трапеции
 
 \[ H = D = 2R \] \\
 
+\newpage
+\section{Формула площади равнобедренной трапеции через диагонали и угол между ними}
+
+\begin{figure}[h]
+\begin{center}
+	\begin{tikzpicture}
+	\draw (-1, 1.45) -- (2.1, -1.45); % диагональ
+	\draw (1, 1.45) -- (-2.1, -1.45); % диагональ
+	
+	%\draw [shift={(0, 0.45)}] (109 : 0.35) arc (109 : 170 : 0.35); % нижний правый угол
+	
+	\draw(0.01, 0.52) circle (0.25cm); % круг	
+	\draw [shift={(0, 0.51)}] (0, 0) -- (136 : 0.35) arc (140 : 222 : 0.35) -- cycle; % угол слева
+	\draw [shift={(0, 0.51)}] (0, 0) -- (-42 : 0.35) arc (-42 : 43 : 0.35) -- cycle;  % угол справа
+
+	\draw (-1, 1.45) -- (1, 1.45);       % верхняя линия
+	\draw (1, 1.45) -- (2.1, -1.45);     % линия справа
+	\draw (2.1, -1.45) -- (-2.1, -1.45); % нижняя линия
+	\draw (-2.1, -1.45) -- (-1, 1.45);   % линия слева
+
+	\draw (-1.7, 0) -- (-1.4, -0.08); % слева
+	\draw (-1.68, 0.08) -- (-1.4, 0); % слева
+
+	\draw (1.4, -0.08) -- (1.7, 0); % справа
+	\draw (1.4, 0) -- (1.7, 0.08);  % справа
+
+	\begin{scriptsize}
+		\draw [fill=black] (-1, 1.45) circle (1.5pt);    % точка вверху слева
+		\draw [fill=black] (1, 1.45) circle (1.5pt);     % точка вверху справа
+		\draw [fill=black] (2.1, -1.45) circle (1.5pt);  % точка снизу справа
+		\draw [fill=black] (-2.1, -1.45) circle (1.5pt); % точка снизу слева
+		
+		\draw (-0.5, 0.5) node {$\alpha$};
+		\draw (0, 0) node {$\beta$};
+		\draw (-1, -0.75) node {$d$};
+		\draw (1, -0.75) node {$d$};
+	\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+\end{figure}
+
+\subsection{Обозначения}
+
+d - диагональ трапеции \\
+$\alpha, \beta$ - углы между диагоналями
+
+\subsection{Формула площади равнобедренной трапеции через диагонали и угол между ними}
+
+\[ S = \frac{d^2}{2}\sin\alpha = \frac{d^2}{2}\sin\beta \]
+
+\newpage
+\section{Формула площади равнобедренной трапеции через среднюю линию, боковую сторону и угол при основании}
+
+\begin{figure}[h]
+\begin{center}
+	\begin{tikzpicture}
+
+	\draw [shift={(-1, 1.45)}] (0, 0) -- (-109 : 0.25) arc (-109 : 0 : 0.25) -- cycle; % левый верхний угол
+	\draw [shift={(1, 1.45)}] (0, 0) -- (180 : 0.25) arc (180 : 289 : 0.25) -- cycle;  % правый верхний угол
+
+	\draw (-1, 1.45) -- (1, 1.45);       % верхняя линия
+	\draw (1, 1.45) -- (2.1, -1.45);     % линия справа
+	\draw (2.1, -1.45) -- (-2.1, -1.45); % нижняя линия
+	\draw (-2.1, -1.45) -- (-1, 1.45);   % линия слева
+	
+	\draw (-1.55, 0) -- (1.55, 0); % средняя линия трапеции
+
+	\draw [shift={(2.1, -1.45)}] (109 : 0.35) arc (109 : 180 : 0.35); % нижний правый угол
+	\draw [shift={(2.1,-1.45)}] (109 : 0.3) arc (109 : 180 : 0.3);    % нижний правый угол
+
+	\draw [shift={(-2.1, -1.45)}] (0 : 0.35) arc (0 : 70 : 0.35);     % нижний левый угол
+	\draw [shift={(-2.1, -1.45)}] (0 : 0.3) arc (0 : 70 : 0.3);       % нижний левый угол
+
+	\draw (-1.8, -0.2) -- (-1.45, -0.3);   % слева
+	\draw (-1.85, -0.35) -- (-1.5, -0.45); % слева
+	\draw (1.8, -0.2) -- (1.45, -0.3);     % справа
+	\draw (1.85, -0.35) -- (1.5, -0.45);   % справа
+
+	\begin{scriptsize}
+		\draw [fill=black] (-1, 1.45) circle (1.5pt);    % точка вверху слева
+		\draw [fill=black] (1, 1.45) circle (1.5pt);     % точка вверху справа
+		\draw [fill=black] (2.1, -1.45) circle (1.5pt);  % точка снизу справа
+		\draw [fill=black] (-2.1, -1.45) circle (1.5pt); % точка снизу слева
+		
+		\draw [fill=black] (-1.55, 0) circle (1.5pt); % точка в центре слева
+		\draw [fill=black] (1.55, 0) circle (1.5pt);  % точка в центре справа
+
+		\draw (-0.7, 1.1) node {$\alpha$};
+		\draw (-1.6, -1.1) node {$\beta$};
+		\draw (-1.8, 0) node {$с$};
+		\draw (1.8, 0) node {$с$};
+		\draw (0, -0.2) node {$m$};
+	\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+\end{figure}
+
+\subsection{Обозначения}
+
+c - боковая сторона \\
+m - средняя линия трапеции \\
+$\alpha, \beta$ - углы между диагоналями
+
+\subsection{Формула площади равнобедренной трапеции через среднюю линию, боковую сторону и угол при основании}
+
+\[ S = mc\sin\alpha = mc\sin\beta \]
+
+\newpage
+\section{Формула площади равнобедренной трапеции через основания и высоту}
+
+\begin{figure}[h]
+\begin{center}
+	\begin{tikzpicture}
+
+	\draw [shift={(-1, 1.45)}] (0, 0) -- (-109 : 0.25) arc (-109 : 0 : 0.25) -- cycle; % левый верхний угол
+	\draw [shift={(1, 1.45)}] (0, 0) -- (180 : 0.25) arc (180 : 289 : 0.25) -- cycle;  % правый верхний угол
+
+	\draw (-1, 1.45) -- (1, 1.45);       % верхняя линия
+	\draw (1, 1.45) -- (2.1, -1.45);     % линия справа
+	\draw (2.1, -1.45) -- (-2.1, -1.45); % нижняя линия
+	\draw (-2.1, -1.45) -- (-1, 1.45);   % линия слева
+	
+	\draw (-1, 1.45) -- (-1, -1.45); % высота трапеции
+
+	\draw [shift={(2.1, -1.45)}] (109 : 0.35) arc (109 : 180 : 0.35); % нижний правый угол
+	\draw [shift={(2.1,-1.45)}] (109 : 0.3) arc (109 : 180 : 0.3);    % нижний правый угол
+
+	\draw [shift={(-2.1, -1.45)}] (0 : 0.35) arc (0 : 70 : 0.35);     % нижний левый угол
+	\draw [shift={(-2.1, -1.45)}] (0 : 0.3) arc (0 : 70 : 0.3);       % нижний левый угол
+
+	\draw (-1.7, 0) -- (-1.4, -0.08); % слева
+	\draw (-1.68, 0.08) -- (-1.4, 0); % слева
+	\draw (1.4, -0.08) -- (1.7, 0);   % справа
+	\draw (1.4, 0) -- (1.7, 0.08);    % справа
+
+	\begin{scriptsize}
+		\draw [fill=black] (-1, 1.45) circle (1.5pt);    % точка вверху слева
+		\draw [fill=black] (1, 1.45) circle (1.5pt);     % точка вверху справа
+		\draw [fill=black] (2.1, -1.45) circle (1.5pt);  % точка снизу справа
+		\draw [fill=black] (-2.1, -1.45) circle (1.5pt); % точка снизу слева
+		
+		\draw [fill=black] (-1, -1.45) circle (1.5pt);  % нижняя точка высоты трапеции
+
+		\draw (0, 1.6) node {$a$};
+		\draw (0, -1.65) node {$b$};
+		\draw (-0.75, 0) node {$h$};
+	\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+\end{figure}
+
+\subsection{Обозначения}
+
+a - нижнее основание \\
+b - верхнее основание \\
+h - высота трапеции
+
+\subsection{Формула площади равнобедренной трапеции через основания и высоту}
+
+\[ S = \frac{a + b}{a}h \]
+
+\newpage
+\section{Площадь треугольника по стороне и двум углам}
+
+\begin{figure}[h]
+\begin{center}
+	\begin{tikzpicture}
+	
+		\draw  (0, 0) -- (1.5, 3); % (A, B)
+		\draw  (1.5, 3) -- (4, 1); % (B, C)
+		\draw  (4, 1) -- (0, 0);   % (A, C)
+		
+		\draw [shift={(0, 0)}] (0, 0) -- (14 : 0.6) arc (14 : 63.4 : 0.6) -- cycle; % угол A
+		\draw [shift={(1.5, 3)}] (-116.5 : 0.6) arc (-116.5 : -38.6 : 0.6);         % угол В
+		\draw [shift={(1.5, 3)}] (-116.5 : 0.5) arc (-116.5 : -38.6 : 0.5);         % угол В
+		\draw [shift={(4, 1)}] (141.3 : 0.6) arc (141.3 : 194 : 0.6);               % угол С
+		\draw [shift={(4, 1)}] (141.3 : 0.5) arc (141.3 : 194 : 0.5);               % угол С
+		\draw [shift={(4, 1)}] (141.3 : 0.4) arc (141.3 : 194 : 0.4);               % угол С
+		
+	\begin{scriptsize}
+		\draw [fill=black] (0, 0) circle (1.5pt);   % точка А
+		\draw [fill=black] (1.5, 3) circle (1.5pt); % точка В
+		\draw [fill=black] (4, 1) circle (1.5pt);   % точка С
+		
+		\draw (3, 2) node {$a$};
+		\draw (2, 0.25) node {$b$};
+		\draw (0.5, 1.5) node {$c$};
+		
+		\draw (0.75, 0.5) node {$\alpha$};
+		\draw (1.65, 2.15) node {$\beta$};
+		\draw (3.25, 1.15) node {$\gamma$};
+	\end{scriptsize}
+	\end{tikzpicture}
+\end{center}
+\end{figure}
+
+\subsection{Обозначения}
+
+a, b, c- стороны треугольника \\
+$\alpha, \beta, \gamma$ - противолежащие углы
+
+\subsection{Площадь треугольника через сторону и два угла}
+
+\begin{align*}
+S = \frac{a^2}{2} \times \frac{\sin(\beta)\sin(\gamma)}{\sin(\beta + \gamma)} = \frac{a^2}{2} \times \frac{\sin(\beta)\sin(\gamma)}{\sin(\alpha)} \\[6pt]
+S = \frac{b^2}{2} \times \frac{\sin(\alpha)\sin(\gamma)}{\sin(\alpha + \gamma)} = \frac{b^2}{2} \times \frac{\sin(\alpha)\sin(\gamma)}{\sin(\beta)} \\[6pt]
+S = \frac{c^2}{2} \times \frac{\sin(\alpha)\sin(\beta)}{\sin(\alpha + \beta)} = \frac{c^2}{2} \times \frac{\sin(\alpha)\sin(\beta)}{\sin(\gamma)} \\
+\end{align*}
+
+\newpage
+\section{Формула площади правильного многоугольника}
+
+\begin{figure}[h]
+\begin{center}
+	\begin{tikzpicture}
+		\draw (0, 4) -- (-1.5, 3);
+		\draw (-1.5, 3) -- (-1, 1);
+		\draw (-1, 1) -- (1, 1);
+		\draw (1, 1) -- (1.5, 3);
+		\draw (1.5, 3) -- (0, 4);
+		\draw (0, 4) -- (0, 2.5);
+		\draw (-1.5, 3) -- (0, 2.5);
+		\draw (1.5, 3) -- (0, 2.5);
+		\draw (-1, 1) -- (0, 2.5);
+		\draw (1, 1) -- (0, 2.5);
+	\begin{scriptsize}
+		\draw [fill=black] (0, 4) circle (1.5pt);
+		\draw [fill=black] (-1.5, 3) circle (1.5pt);
+		\draw [fill=black] (-1, 1) circle (1.5pt);
+		\draw [fill=black](1, 1) circle (1.5pt);
+		\draw [fill=black] (1.5, 3) circle (1.5pt);
+		\draw [fill=black] (0, 2.5) circle (1.5pt);
+		
+		\draw (0.8, 3.75) node {$a$};
+		\draw (1.5, 2) node {$a$};
+		\draw (-0.8, 3.75) node {$a$};
+		\draw (-1.5, 2) node {$a$};
+		\draw (0, 0.8) node {$a$};		
+	\end{scriptsize}
+	\end{tikzpicture}
+\end{center}
+\end{figure}
+
+\subsection{Обозначения}
+
+a - сторона многоугольника \\
+n - количество сторон
+
+\subsection{Площадь правильного многоугольника}
+
+\[ S = \frac{na^2}{4\tg \left(\dfrac{180\,^{\circ}}{n} \right)} \]
+
+\newpage
+\section{Площадь треугольника, формула Герона}
+
+\begin{figure}[h]
+\begin{center}
+	\begin{tikzpicture}
+		\draw  (0, 0) -- (1.5, 3); % (A, B)
+		\draw  (1.5, 3) -- (4, 1); % (B, C)
+		\draw  (4, 1) -- (0, 0);   % (A, C)
+	\begin{scriptsize}
+		\draw [fill=black] (0, 0) circle (1.5pt);   % точка А
+		\draw [fill=black] (1.5, 3) circle (1.5pt); % точка В
+		\draw [fill=black] (4, 1) circle (1.5pt);   % точка С
+		
+		\draw (3, 2) node {$a$};
+		\draw (2, 0.25) node {$b$};
+		\draw (0.5, 1.5) node {$c$};
+	\end{scriptsize}
+	\end{tikzpicture}
+\end{center}
+\end{figure}
+
+\subsection{Обозначения}
+
+a, b, c,- стороны треугольника \\[6pt]
+p - полупериметр \\[6pt]
+$p = \dfrac{( a + b + c)}{2}$
+
+\subsection{Площадь правильного многоугольника}
+
+\[ S = \sqrt{p(p - a)(p - b)(p - c)} \]
+
+\newpage
+\section{Формула расчета площади треугольника}
+
+\begin{figure}[h]
+\begin{center}
+	\begin{tikzpicture}
+		\draw (0, 0) -- (3, 3);
+		\draw (3, 3) -- (5, 0);
+		\draw (5, 0) -- (0, 0);
+		\draw (3, 3) -- (3, 0);
+	\begin{scriptsize}
+		\draw [fill=black] (0, 0) circle (1.5pt);
+		\draw [fill=black] (3, 3) circle (1.5pt);
+		\draw [fill=black] (5, 0) circle (1.5pt);
+		\draw [fill=black] (3, 0) circle (1.5pt);
+		
+		\draw (2,-0.3) node {$a$};
+		\draw (2.75,1.5) node {$h$};
+	\end{scriptsize}
+	\end{tikzpicture}
+\end{center}
+\end{figure}
+
+\subsection{Обозначения}
+
+h - высота треугольника \\
+a - основание
+
+\subsection{Площадь правильного многоугольника}
+
+\[ S = \frac{1}{2}ah \]
+
 \end{document} % Конец текста.

@@ -19,8 +19,8 @@
 {\hbox{$\mathsurround=0pt #1$}}{}}
 
 %%% Работа с картинками
-\usepackage{graphicx}              % Для вставки рисунков
-\usepackage{wrapfig}               % Обтекание рисунков текстом
+\usepackage{graphicx} % Для вставки рисунков
+\usepackage{wrapfig}  % Обтекание рисунков текстом
 
 %%% Работа с таблицами
 \usepackage{array,tabularx,tabulary,booktabs} % Дополнительная работа с таблицами
@@ -34,7 +34,6 @@
 \usepackage[]{geometry}
 
 \usetikzlibrary{arrows}
-\newcommand{\degre}{\ensuremath{^\circ}}
 
 %%% Заголовок
 \author{Hun Fauser}
@@ -735,5 +734,236 @@ $\alpha$ - угол сегмента в градусах
 \subsection{Формула площади сегмента круга, отсекаемая хордой AC}
 
 \[ S = \frac{1}{2}R^2 \left( \frac{\pi\alpha}{180\,^{\circ}} - \sin\alpha \right) \]
+
+\newpage
+\section{Площадь сегмента круга}
+
+\begin{figure}[h]
+\begin{center}
+	\begin{tikzpicture}
+		\draw  (0, 0) -- (1, 2);  % верхняя левая сторона ромба
+		\draw  (1, 2)-- (2, 0);   % верхняя правая сторона ромба
+		\draw  (2,0) -- (1,-2);   % нижняя правая сторона ромба
+		\draw  (1, -2) -- (0, 0); % нижняя левая сторона ромба
+		
+		\draw (0, 0) -- (2,0);   % горизонтальная линия
+		\draw (1, 2) -- (1, -2); % вертикальная линия
+		
+		\draw [shift={(0, 0)}] (0, 0) -- (-63 : 0.4) arc (-63 : 63 : 0.4) -- cycle; % правый угол
+		\draw [shift={(2,0)}] (0, 0) -- (116 : 0.4) arc (116 : 243 : 0.4) -- cycle; % левый угол
+		\draw (1, 0) -- (1.2, 0) -- (1.2, 0.2) -- (1, 0.2) -- cycle;                % угол 90
+		
+		\draw [shift={(1,2)}] (-116 : 0.6) arc (-116 : -63 : 0.6); % верхний угол
+		\draw [shift={(1,2)}] (-116 : 0.5) arc (-116 : -63 : 0.5); % верхний угол
+		\draw [shift={(1, -2)}] (63 : 0.6) arc (63 : 116 : 0.6);   % нижний угол
+		\draw [shift={(1, -2)}] (63 : 0.5) arc (63 : 116 : 0.5);   % нижний угол
+	\begin{scriptsize}
+		\draw [fill=black] (0, 0) circle (1.5pt);  % левая точка
+		\draw [fill=black] (1, 2) circle (1.5pt);  % верхняя точка
+		\draw [fill=black] (2, 0) circle (1.5pt);  % правая точка
+		\draw [fill=black] (1, -2) circle (1.5pt); % нижняя точка
+		\draw [fill=black] (1, 0) circle (1.5pt);  % точка в центре
+		
+		\draw (0.2, 1.15) node {$a$};  % левая верхняя a
+		\draw (1.8, 1.15) node {$a$};  % правая верхняя a
+		\draw (1.8, -1.15) node {$a$}; % правая нижняя a
+		\draw (0.2, -1.15) node {$a$}; % левая нижняя a
+		
+		\draw (1.15, -0.6) node {$D$};
+		\draw (0.6, 0.2) node {$d$};
+		
+		\draw (1.5, -0.2) node {$\alpha$};
+		\draw (1.15, 1.2) node {$\beta$};
+	\end{scriptsize}
+	\end{tikzpicture}
+\end{center}
+\end{figure}
+
+\subsection{Обозначения}
+
+a - сторона ромба \\
+D - большая диагональ \\
+d - меньшая диагональ \\
+$\alpha$ - острый угол \\
+$\beta$ - тупой угол
+
+\subsection{Формулы площади ромба}
+
+\begin{align*}
+S = \frac{D \times d}{2} \\[6pt]
+S = a^2\sin\alpha = a^2\sin\beta \\[6pt]
+S = \frac{1}{2} D^2 \tg \left( \frac{\alpha}{2} \right) = \frac{1}{2} d^2 \tg \left( \frac{\beta}{2} \right)
+\end{align*}
+
+\newpage
+\section{Формула площади трапеции через четыре стороны}
+
+\begin{figure}[h]
+\begin{center}
+	\begin{tikzpicture}
+		\draw  (0, 0) -- (1.5, 2.5);   % сторона a
+		\draw  (1.5, 2.5) -- (4, 2.5); % сторона b
+		\draw  (4, 2.5) -- (4.5, 0);   % сторона c
+		\draw  (4.5, 0) -- (0, 0);     % сторона d
+	\begin{scriptsize}
+		\draw [fill=black] (0, 0) circle (1.5pt);     % нижняя левая точка
+		\draw [fill=black] (1.5, 2.5) circle (1.5pt); % верхняя левая точка
+		\draw [fill=black] (4, 2.5) circle (1.5pt);   % верхняя правая точка
+		\draw [fill=black] (4.5, 0) circle (1.5pt);   % нижняя правая точка
+
+		\draw (0.55, 1.3) node {$a$};
+		\draw (2.7, 2.8) node {$b$};
+		\draw (4.45, 1.3) node {$c$};
+		\draw (2.25, -0.3) node {$d$};
+	\end{scriptsize}
+	\end{tikzpicture}
+\end{center}
+\end{figure}
+
+\subsection{Обозначения}
+
+d - нижнее основание \\
+b - верхнее основание \\
+a, d - боковые стороны
+
+\subsection{Формулы площади трапеции}
+
+\[ S = \frac{a + b}{2} \sqrt{c^2 - \left( \frac{(a - b)^2 + c^2 -d^2}{2(a - b)} \right)^2} \]
+
+\newpage
+\section{Формула площади параллелограмма через стороны и углы}
+
+\begin{figure}[h]
+\begin{center}
+	\begin{tikzpicture}
+		\draw  (0, 0) -- (1, 2); % сторона a влево
+		\draw  (1, 2) -- (4, 2); % сторона в вверху
+		\draw  (4, 2) -- (3, 0); % сторона a вправо
+		\draw  (3, 0) -- (0, 0); % сторона в внизу
+		
+		\draw [shift={(3, 0)}] (0, 0) -- (63 : 0.5) arc (63 : 180 : 0.5) -- cycle;
+		\draw [shift={(1, 2)}] (0, 0) -- (-116 : 0.5) arc (-116 : 0 : 0.5) -- cycle;
+		
+		\draw [shift={(4, 2)}] (180 : 0.5) arc (180 : 243 : 0.5);
+		\draw [shift={(4, 2)}] (180 : 0.6) arc (180 : 243 : 0.6);
+		\draw [shift={(0, 0)}] (0 : 0.5) arc (0 : 63 : 0.5);
+		\draw [shift={(0, 0)}] (0 : 0.6) arc (0 : 63 : 0.6);
+	\begin{scriptsize}
+		\draw [fill=black] (0, 0) circle (1.5pt);
+		\draw [fill=black] (1, 2) circle (1.5pt);
+		\draw [fill=black] (4, 2) circle (1.5pt);
+		\draw [fill=black] (3, 0) circle (1.5pt);
+		
+		\draw (0.25, 1) node {$a$};
+		\draw (3.75, 1) node {$a$};
+		\draw (2.5, 2.2) node {$b$};
+		\draw (1.5, -0.2) node {$b$};
+		
+		\draw (2.45, 0.5) node {$\alpha$};
+		\draw (0.75, 0.5) node {$\beta$};		
+	\end{scriptsize}
+	\end{tikzpicture}
+\end{center}
+\end{figure}
+
+\subsection{Обозначения}
+
+a, b - стороны параллелограмма \\
+$\alpha, \beta$ - углы параллелограмма
+
+\subsection{Формула площади через стороны и углы параллелограмма}
+
+\[ S = ab \times \sin\alpha = ab \times \sin\beta \]
+
+\newpage
+\section{Формула площади параллелограмма через сторону и высоту}
+
+\begin{figure}[h]
+\begin{center}
+	\begin{tikzpicture}
+		\draw  (0, 0) -- (1, 2); % левая сторона a
+		\draw  (1, 2) -- (4, 2); % верхняя сторона в
+		\draw  (4, 2) -- (3, 0); % правая сторона a
+		\draw  (3, 0) -- (0, 0); % нижняя сторона в
+		
+		\draw (1, 2) -- (1, 0);     % вертикальная линия
+		\draw (1, 2) -- (3.4, 0.8); % диагональная линия
+		
+		\draw (1, 0) -- (1.25, 0) -- (1.25, 0.25) -- (1, 0.25) -- cycle;             % угол 90 у вертикальной линии
+		\draw (3.155, 0.92) -- (3.4, 0.8) -- (3.525, 1.05) -- (3.28, 1.17) -- cycle; % угол 90 у горизонтальной линии
+	\begin{scriptsize}
+		\draw [fill=black] (0, 0) circle (1.5pt);
+		\draw [fill=black] (1, 2) circle (1.5pt);
+		\draw [fill=black] (4, 2) circle (1.5pt);
+		\draw [fill=black] (3, 0) circle (1.5pt);
+		\draw [fill=black] (1, 0) circle (1.5pt);
+		\draw [fill=black] (3.4, 0.8) circle (1.5pt);
+
+		\draw (0.25, 1) node {$a$};
+		\draw (3.75, 1) node {$a$};
+		\draw (2.5, 2.2) node {$b$};
+		\draw (1.5, -0.2) node {$b$};
+		
+		\draw (1.25, 0.85) node {$H_b$};
+		\draw (2.1, 1.25) node {$H_a$};
+	\end{scriptsize}
+	\end{tikzpicture}
+\end{center}
+\end{figure}
+
+\subsection{Обозначения}
+
+a, b - стороны параллелограмма \\
+$H_b$ - высота на сторону b \\
+$H_a$ - высота на сторону a
+
+\subsection{Формула площади через стороны и высоты параллелограмма}
+
+\[ S = b \times H_b = a \times H_a \]
+
+\newpage
+\section{Формула площади параллелограмма через диагонали и угол между ними}
+
+\begin{figure}[h]
+\begin{center}
+	\begin{tikzpicture}
+		\draw  (0, 0) -- (1, 2);
+		\draw  (1, 2) -- (4, 2);
+		\draw  (4, 2) -- (3, 0);
+		\draw  (3, 0) -- (0, 0);
+		
+		\draw (1, 2) -- (3, 0);
+		\draw (0, 0) -- (4, 2);
+		
+		\draw [shift={(2, 1)}] (0, 0) -- (135 : 0.5) arc (135 : 206 : 0.5) -- cycle;
+		\draw [shift={(2, 1)}] (0, 0) -- (-45 : 0.5) arc (-45 : 26 : 0.5) -- cycle;
+		
+		\draw(2, 1) circle (0.35cm);
+	\begin{scriptsize}
+		\draw [fill=black] (0, 0) circle (1.5pt);
+		\draw [fill=black] (1, 2) circle (1.5pt);
+		\draw [fill=black] (4, 2) circle (1.5pt);
+		\draw [fill=black] (3, 0) circle (1.5pt);
+		\draw [fill=black] (2, 1) circle (1.5pt);
+		
+		\draw (2.65, 0.9) node {$d$};
+		\draw (2.65, 1.6) node {$D$};
+		
+		\draw (1.3, 1.1) node {$\alpha$};
+		\draw (1.9, 0.45) node {$\beta$};
+	\end{scriptsize}
+	\end{tikzpicture}
+\end{center}
+\end{figure}
+
+\subsection{Обозначения}
+
+D - большая диагональ \\
+d - меньшая диагональ \\
+$\alpha, \beta$ - углы между диагоналями
+
+\subsection{Формула площади через диагонали параллелограмма и угол между ними}
+
+\[ S = \frac{1}{2}Dd \times \sin\alpha = \frac{1}{2}Dd \times \sin\beta \]
 
 \end{document} % Конец текста.

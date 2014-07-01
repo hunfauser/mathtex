@@ -736,7 +736,51 @@ $\alpha$ - угол сегмента в градусах
 \[ S = \frac{1}{2}R^2 \left( \frac{\pi\alpha}{180\,^{\circ}} - \sin\alpha \right) \]
 
 \newpage
-\section{Площадь сегмента круга}
+\section{Площадь сектора круга}
+
+\begin{figure}[h]
+\begin{center}
+	\begin{tikzpicture}
+		\draw (0, 0) -- (3, 0);     % горизонтальная линия
+		\draw (3, 0) -- (4.5, 2.5); % вертикальная линия
+		
+		\draw [shift={(3, 0)}] (0, 0) -- plot[domain=1.03 : 3.14, variable=\t]({1 * 2.5 * cos(\t r) +- 0 * 2.5 * sin(\t r)}, {0 * 2.5 * cos(\t r) + 1 * 2.5 * sin(\t r)}) -- cycle; % большая дуга
+		
+		\draw [shift={(3, 0)}] (0, 0) -- (59 : 0.5) arc (58 : 180.2 : 0.5) -- cycle;
+	\begin{scriptsize} % угол
+	
+		\draw [fill=black] (4.29, 2.14) circle (1.5pt); % точка B
+		\draw [fill=black] (0.5, 0) circle (1.5pt);     % точка A
+		\draw [fill=black] (3, 0) circle (1.5pt);       % точка O
+		
+		\draw (0.45, -0.35) node {$A$};
+		\draw (3.2, -0.35) node {$O$};		
+		\draw (4.2, 2.4) node {$B$};
+		
+		\draw (1.15, 2) node {$L$};
+		\draw (3.8, 0.85) node {$r$};
+		\draw (2.6, 0.6) node {$\alpha$};
+	\end{scriptsize}
+	\end{tikzpicture}
+\end{center}
+\end{figure}
+
+\subsection{Обозначения}
+
+r - радиус круга \\
+L - длина дуги AB \\
+$\alpha$ - угол сектора круга AOB в градусах
+
+\subsection{Формула площади сектора круга, через длину дуги (L)}
+
+\[ S = \frac{1}{2}Lr \]
+
+\subsection{Формула площади сектора круга, через угол ($\alpha$):}
+
+\[ S = \frac{\pi r^2 \alpha}{360\,^{\circ}} \]
+
+\newpage
+\section{Площадь ромба}
 
 \begin{figure}[h]
 \begin{center}
@@ -965,5 +1009,226 @@ $\alpha, \beta$ - углы между диагоналями
 \subsection{Формула площади через диагонали параллелограмма и угол между ними}
 
 \[ S = \frac{1}{2}Dd \times \sin\alpha = \frac{1}{2}Dd \times \sin\beta \]
+
+\newpage
+\section{Найти площадь треугольника, угол и две стороны}
+
+\begin{figure}[h]
+\begin{center}
+	\begin{tikzpicture}
+		\draw  (0, 0) -- (1.5, 3);
+		\draw  (1.5, 3) -- (4, 1);
+		\draw  (4, 1) -- (0, 0); 
+
+		\draw [shift={(4, 1)}] (0, 0) -- (141.5 : 0.3) arc (152 : 190 : 0.4) -- cycle; % угол alpha
+
+		\draw [shift={(0, 0)}] (14 : 0.5) arc (14 : 64 : 0.5); % угол beta
+		\draw [shift={(0, 0)}] (14 : 0.4) arc (14 : 64 : 0.4); % угол beta
+
+		\draw [shift={(1.5, 3)}] (-116 : 0.6) arc (-120 :-40 : 0.6); % угол gamma
+		\draw [shift={(1.5, 3)}] (-116 : 0.5) arc (-120 :-40 : 0.5); % угол gamma
+		\draw [shift={(1.5, 3)}] (-116 : 0.4) arc (-120 :-40 : 0.4); % угол gamma
+	\begin{scriptsize}
+		\draw [fill=black] (0, 0) circle (1.5pt);
+		\draw [fill=black] (1.5, 3) circle (1.5pt);
+		\draw [fill=black] (4, 1) circle (1.5pt);
+		
+		\draw (3, 2) node {$a$};
+		\draw (2, 0.25) node {$b$};
+		\draw (0.5, 1.5) node {$c$};
+		
+		\draw (3.5, 1.1) node {$\alpha$};
+		\draw (0.6, 0.5) node {$\beta$};
+		\draw (1.65, 2.2) node {$\gamma$};
+	\end{scriptsize}
+	\end{tikzpicture}
+	\caption{Зная у треугольника, две стороны и синус угла между ними, находим по формуле, его площадь.}
+\end{center}
+\end{figure}
+
+\subsection{Обозначения}
+
+a, b, c - стороны треугольника \\
+$\alpha, \beta, \gamma$ - углы
+
+\subsection{Формулы площади треугольника, через две стороны и угол между ними}
+
+\begin{align*}
+S = \frac{1}{2}bc\sin(\alpha) \\[6pt]
+S = \frac{1}{2}ac\sin(\beta) \\[6pt]
+S = \frac{1}{2}ab\sin(\gamma)
+\end{align*}
+
+\newpage
+\section{Площадь равностороннего треугольника}
+
+\begin{figure}[h]
+\begin{center}
+	\begin{tikzpicture}
+		\draw (0, 0) -- (2, 3);
+		\draw (2, 3) -- (4, 0);
+		\draw (4, 0) -- (0, 0);
+		\draw (2, 3) -- (2, 0);
+		
+		\draw (2, 0) -- (2.25, 0) -- (2.25, 0.25) -- (2, 0.25) -- cycle; 
+	\begin{scriptsize}
+		\draw [fill=black] (0, 0) circle (1.5pt);
+		\draw [fill=black] (2, 3) circle (1.5pt);
+		\draw [fill=black] (4, 0) circle (1.5pt);
+		\draw [fill=black] (2, 0) circle (1.5pt);
+		
+		\draw (0.65, 1.5) node {$a$};
+		\draw (3.3, 1.5) node {$a$};
+		\draw (1.4, -0.2) node {$a$};		
+		\draw (2.2, 1.3) node {$h$};
+	\end{scriptsize}
+	\end{tikzpicture}
+\end{center}
+\end{figure}
+
+\subsection{Обозначения}
+a - сторона треугольника \\
+h - высота
+
+\subsection{Площадь треугольника через сторону a и высоту h}
+
+\[ S = \frac{1}{2}ah \]
+
+\subsection{Площадь треугольника только через сторону a}
+
+\[ S = \frac{\sqrt{3}}{4}a^2 \]
+
+\subsection{Площадь треугольника только через высоту h}
+
+\[ S = \frac{h^2}{\sqrt{3}} \]
+
+\newpage
+\section{площадь равнобедренного треугольника}
+
+\begin{figure}[h]
+\begin{center}
+	\begin{tikzpicture}
+		\draw  (0, 0)  -- (1.5, 3);
+		\draw  (1.5, 3) -- (3, 0);
+		\draw  (3, 0) -- (0, 0);
+		\draw (1.5, 3) -- (1.5, 0);
+		
+		\draw (1.5, 0) -- (1.75, 0) -- (1.75, 0.25) -- (1.5, 0.25);
+	\begin{scriptsize}
+		\draw [fill=black] (0, 0) circle (1.5pt);
+		\draw [fill=black] (1.5,3.0) circle (1.5pt);
+		\draw [fill=black] (3.0,0.0) circle (1.5pt);
+		\draw [fill=black] (1.5, 0) circle (1.5pt);
+		
+		\draw (0.5, 1.5) node {$a$};
+		\draw (2.5, 1.5) node {$a$};
+		\draw (1, -0.2) node {$b$};		
+		\draw (1.7, 1.3) node {$h$};
+	\end{scriptsize}
+	\end{tikzpicture}
+\end{center}
+\end{figure}
+
+\subsection{Обозначения}
+
+b - основание треугольника \\
+a - равные стороны \\
+h - высота
+
+\subsection{Формула площади треугольника через высоту h и основание b}
+
+\[ S = \frac{1}{2}bh \]
+
+\subsection{Формула площади треугольника через, стороны a, b}
+
+\[ S = \frac{b}{4}sqrt{4a^2 - b^2} \]
+
+\newpage
+\section{Формула площади трапеции через основания и высоту}
+
+\begin{figure}[h]
+\begin{center}
+	\begin{tikzpicture}
+		\draw  (0, 0) -- (1.5, 2.5);   % сторона a
+		\draw  (1.5, 2.5) -- (4, 2.5); % сторона b
+		\draw  (4, 2.5) -- (4.5, 0);   % сторона c
+		\draw  (4.5, 0) -- (0, 0);     % сторона d
+		
+		\draw (1.5, 2.5) -- (1.5, 0);       % высота
+		\draw (0.75, 1.25) -- (4.25, 1.25); % средняя линия
+		
+		\draw (1.5, 0) -- (1.75, 0) -- (1.75, 0.25) -- (1.5, 0.25);
+	\begin{scriptsize}
+		\draw [fill=black] (0, 0) circle (1.5pt);     % нижняя левая точка
+		\draw [fill=black] (1.5, 2.5) circle (1.5pt); % верхняя левая точка
+		\draw [fill=black] (4, 2.5) circle (1.5pt);   % верхняя правая точка
+		\draw [fill=black] (4.5, 0) circle (1.5pt);   % нижняя правая точка
+		
+		\draw [fill=black] (1.5, 0) circle (1.5pt); 
+		
+		\draw [fill=black] (0.75, 1.25) circle (1.5pt); % левая точка средней линии  
+		\draw [fill=black] (4.25, 1.25) circle (1.5pt); % правая точка средней линии
+		
+		\draw (2.55, 1.4) node {$m$};
+		\draw (2.7, 2.8) node {$b$};
+		\draw (1.7, 0.75) node {$h$};
+		\draw (2.25, -0.3) node {$a$};
+	\end{scriptsize}
+	\end{tikzpicture}
+\end{center}
+\end{figure}
+
+\subsection{Обозначения}
+
+a - нижнее основание \\
+b - верхнее основание \\
+m - средняя линия \\
+h - высота трапеции
+
+\subsection{Формула площади трапеции}
+
+\[ S = \frac{(a + b)}{2} \times h = m \times h \]
+
+\newpage
+\section{Формула площади трапеции через диагонали и угол между ними}
+
+\begin{figure}[h]
+\begin{center}
+	\begin{tikzpicture}
+		\draw (0, 0) -- (1.5, 2.5);
+		\draw (1.5, 2.5) -- (4, 2.5);
+		\draw (4, 2.5) -- (4.5, 0);
+		\draw (4.5, 0) -- (0, 0);
+		\draw (1.5, 2.5) -- (4.5, 0);
+		\draw (0, 0) -- (4, 2.5);
+		
+		\draw [shift={(2.57, 1.6)}] (0, 0) -- (-39 : 0.5) arc (-39 : 33 : 0.5) -- cycle;
+		\draw [shift={(2.57, 1.6)}] (0, 0) -- (139.5 : 0.5) arc (139.5 : 211 : 0.5) -- cycle;
+		
+		\draw(2.57, 1.6) circle (0.4cm);
+	\begin{scriptsize}
+		\draw [fill=black] (0, 0) circle (1.5pt);
+		\draw [fill=black] (1.5, 2.5) circle (1.5pt);
+		\draw [fill=black] (4, 2.5) circle (1.5pt);
+		\draw [fill=black] (4.5, 0) circle (1.5pt);
+		\draw [fill=black] (2.57, 1.6) circle (1.5pt);
+		
+		\draw (1.9, 1.65) node {$\alpha$};
+		\draw (2.55, 1) node {$\beta$};
+		\draw (1.5, 0.75) node {$d_1$};
+		\draw (3.3, 0.75) node {$d_2$};
+	\end{scriptsize}
+	\end{tikzpicture}
+\end{center}
+\end{figure}
+	
+\subsection{Обозначения}
+
+$d_1, d_2$ - диагонали трапеции \\
+$\alpha, \beta$ - углы между диагоналями
+
+\subsection{Формула площади трапеции}
+
+\[ S = \frac{d_1 d_2}{2}\sin\alpha = \frac{d_1 d_2}{2}\sin\beta \]
 
 \end{document} % Конец текста.

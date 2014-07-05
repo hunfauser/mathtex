@@ -1,0 +1,62 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{cmap}					% поиск в PDF
+\usepackage{mathtext} 				% русские буквы в формулах
+\usepackage[T2A]{fontenc}			% кодировка
+\usepackage[utf8]{inputenc}			% кодировка исходного текста
+\usepackage[english,russian]{babel}	% локализация и переносы
+
+% Дополнительная работа с математикой
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} % AMS
+\usepackage{icomma}                                    % "Умная" запятая
+
+% Шрифты
+\usepackage{euscript} % Шрифт Евклид
+\usepackage{mathrsfs} % Матшрифт
+
+% Заголовок
+\author{Hun Fauser}
+\title{Правила дифференцирования}
+\date{\today}
+
+\begin{document} % Конец преамбулы, начало текста.
+
+\maketitle
+
+\section{Основные правила дифференцирования}
+
+\begin{align*}
+(u \pm v)' &= u' \pm v'; \\
+(uv)' &= u'v + uv'; \\
+(Cu)' &= Cu'; \\
+\left( \frac{u}{v} \right)' &= \frac{u'v - uv'}{v^2}; ~(v \ne 0) \\
+(x^n)' &= nx^{n - 1}; \\
+C' &= 0; \\
+(kx + b)' &= k; \\
+x' &= 1; \\
+(\sqrt{x})' &= \frac{1}{2\sqrt{x}}; \\
+\left( \frac{1}{x} \right)' &= -\frac{1}{x^2}; \\
+(a^x)' &= a^x \ln a;
+\end{align*}
+
+\section{Производные тригонометрической функции}
+
+\begin{align*}
+(\sin x)' &= \cos x; \\
+(\cos x)' &= -\sin x; \\
+(\tg x)' &= \frac{1}{\cos^2 x}; \\
+(\ctg x)' &= -\frac{1}{(\sin^2 x)}; \\
+(\arcsin x)' &= \frac{1}{\sqrt{1 - x^2}}; \\
+(\arccos x)' &= -\frac{1}{\sqrt{1 - x^2}}; \\
+(\arctg x)' &= \frac{1}{1 + x^2}; \\
+(\arcctg x)' &= -\frac{1}{1 + x^2}; \\
+\end{align*}
+
+\section{Производная логарифмической функции}
+
+\begin{align*}
+(\ln x)' &= \frac{1}{x}; \\
+(\log_{a} x)' &= \frac{1}{x\ln a}
+\end{align*}
+
+\end{document} % Конец текста.

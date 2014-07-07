@@ -10,21 +10,22 @@
 
 % Дополнительная работа с математикой
 \usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} % AMS
-\usepackage{icomma} % "Умная" запятая
+\usepackage{icomma}                                    % "Умная" запятая
 
-%% Шрифты
-\usepackage{euscript}	 % Шрифт Евклид
-\usepackage{mathrsfs}    % Красивый матшрифт
-
-%% Перенос знаков в формулах (по Львовскому)
-\newcommand*{\hm}[1]{#1\nobreak\discretionary{}
-{\hbox{$\mathsurround=0pt #1$}}{}}
+% Шрифты
+\usepackage{euscript} % Шрифт Евклид
+\usepackage{mathrsfs} % Красивый матшрифт
 
 % Работа с таблицами
 \usepackage{graphicx}
 \usepackage[table,xcdraw]{xcolor}
 
-%%% Заголовок
+% Работа с графикой
+\usepackage{pgf,tikz} 
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+
+% Заголовок
 \author{Hun Fauser}
 \title{Тригонометрия}
 \date{\today}
@@ -74,7 +75,49 @@
 \tg2\alpha &= \frac{2\tg\alpha}{1 - \tg^2\alpha}
 \end{align*}
 
-\section{Еще что-то по тригонометрии}
+\section{Преобразование произведения тригонометрических функций в сумму}
+
+\begin{figure}[h]
+\begin{center}
+	\begin{tikzpicture}
+		\draw(0, 0) circle (1cm);
+		\draw(3, 0) circle (1cm);
+		\draw(6, 0) circle (1cm);
+		
+		\draw (0, -1) -- (0, 1);
+		\draw (-1, 0) -- (1, 0);
+		
+		\draw (3, 1) -- (3, -1);
+		\draw (2, 0) -- (4, 0);
+		
+		\draw (6, 1) -- (6, -1);
+		\draw (5, 0)-- (7, 0);
+		
+		\draw [shift={(0, 0)}] plot[domain=0.5:2.6, variable=\t]({1*1.4*cos(\t r)+-0*1.4*sin(\t r)},{0*1.4*cos(\t r)+1*1.4*sin(\t r)});
+		\draw (-1.2, 0.73) -- (-0.9, 0.8);
+		\draw (-1.2, 0.73) -- (-1.3, 1);
+	\begin{scriptsize}
+		\draw (-0.4, 0.4) node {$+$};
+		\draw (0.4, 0.4) node {$+$};
+		\draw (-0.4, -0.4) node {$-$};
+		\draw (0.4, -0.4) node {$-$};
+		\draw (0, -1.2) node {$\sin$};
+		
+		\draw (2.6, 0.4) node {$-$};
+		\draw (3.4, 0.4) node {$+$};
+		\draw (2.6, -0.4) node {$-$};
+		\draw (3.4, -0.4) node {$+$};
+		\draw (3, -1.2) node {$\cos$};
+		
+		\draw (5.6, 0.4) node {$-$};
+		\draw (6.4, 0.4) node {$+$};
+		\draw (5.6, -0.4) node {$+$};
+		\draw (6.4, -0.4) node {$-$};
+		\draw (6, -1.2) node {$\tg, \ctg$};
+	\end{scriptsize}
+	\end{tikzpicture}
+\end{center}
+\end{figure}
 
 \begin{align*}
 \sin\alpha \times \sin\beta &= \frac{1}{2}(\cos(\alpha - \beta) - \cos(\alpha + \beta)) \\

@@ -14,20 +14,17 @@
 \usepackage{euscript} % Шрифт Евклид
 \usepackage{mathrsfs} % Матшрифт
 
-%% Перенос знаков в формулах (по Львовскому)
-\newcommand*{\hm}[1]{#1\nobreak\discretionary{}
-{\hbox{$\mathsurround=0pt #1$}}{}}
-
-%%% Работа с картинками
+% Работа с картинками
 \usepackage{graphicx} % Для вставки рисунков
 \usepackage{wrapfig}  % Обтекание рисунков текстом
 
-%%% Работа с таблицами
+% Работа с таблицами
 \usepackage{array,tabularx,tabulary,booktabs} % Дополнительная работа с таблицами
 \usepackage{longtable}                        % Длинные таблицы
 \usepackage{multirow}                         % Слияние строк в таблице
 
-\usepackage{pgf,tikz} % Работа с графикой
+% Работа с графикой
+\usepackage{pgf,tikz} 
 \usepackage{pgfplots}
 \usepackage{pgfplotstable}
 
@@ -35,7 +32,7 @@
 
 \usetikzlibrary{arrows}
 
-%%% Заголовок
+% Заголовок
 \author{Hun Fauser}
 \title{Геометрия}
 \date{\today}
@@ -117,10 +114,10 @@ a, c = ширина прямоугольника
 \begin{center}
 	\begin{tikzpicture}
 		\draw (0, 0) ellipse (3cm and 2cm); % Нарисовать эллипс
-		\draw (0, 0) -- (0, 2);     	   % Нарисовать вертикальную линию
-		\draw (0, 0) -- (3, 0);    		   % Нарисовать горизонтальную линию
-		\draw[dashed] (-3, 0) -- (0, 0);   % Нарисовать горизонтальную пунктирную линию
-		\draw[dashed] (0, 0) -- (0, -2);   % Нарисовать вертикальную пунктирную линию
+		\draw (0, 0) -- (0, 2);     	    % Нарисовать вертикальную линию
+		\draw (0, 0) -- (3, 0);    		    % Нарисовать горизонтальную линию
+		\draw[dashed] (-3, 0) -- (0, 0);    % Нарисовать горизонтальную пунктирную линию
+		\draw[dashed] (0, 0) -- (0, -2);    % Нарисовать вертикальную пунктирную линию
 	\begin{scriptsize}
 		\draw (1.5, -0.25) node {$R$};
 		\draw (-0.25, 1) node {$r$};
@@ -273,8 +270,6 @@ $\alpha, \beta$ - углы трапеции
 	\begin{tikzpicture}
 	\draw (-1, 1.45) -- (2.1, -1.45); % диагональ
 	\draw (1, 1.45) -- (-2.1, -1.45); % диагональ
-	
-	%\draw [shift={(0, 0.45)}] (109 : 0.35) arc (109 : 170 : 0.35); % нижний правый угол
 	
 	\draw(0.01, 0.52) circle (0.25cm); % круг	
 	\draw [shift={(0, 0.51)}] (0, 0) -- (136 : 0.35) arc (140 : 222 : 0.35) -- cycle; % угол слева

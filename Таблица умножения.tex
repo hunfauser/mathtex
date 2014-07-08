@@ -10,7 +10,7 @@
 \usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} % AMS
 \usepackage{icomma}                                    % "Умная" запятая
 
-%% Шрифты
+% Шрифты
 \usepackage{euscript} % Шрифт Евклид
 \usepackage{mathrsfs} % Красивый матшрифт
 
@@ -18,7 +18,7 @@
 \usepackage{graphicx}
 \usepackage[table,xcdraw]{xcolor}
 
-%%% Заголовок
+% Заголовок
 \author{Hun Fauser}
 \title{Таблица умножения}
 \date{\today}
@@ -27,21 +27,30 @@
 
 \maketitle
 
+\renewcommand{\arraystretch}{1.5}
 \begin{table}[h]
 \centering
 \resizebox{\textwidth}{!}{%
-\begin{tabular}{|
->{\columncolor[HTML]{3166FF}}c |c|c|c|c|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
 \hline
-\cellcolor[HTML]{FFFFFF}{\color[HTML]{FFFFFF} } & \cellcolor[HTML]{3166FF}{\color[HTML]{FFFFFF} \textbf{2}} & \cellcolor[HTML]{3166FF}{\color[HTML]{FFFFFF} \textbf{3}} & \cellcolor[HTML]{3166FF}{\color[HTML]{FFFFFF} \textbf{4}} & \cellcolor[HTML]{3166FF}{\color[HTML]{FFFFFF} \textbf{5}} & \cellcolor[HTML]{3166FF}{\color[HTML]{FFFFFF} \textbf{6}} & \cellcolor[HTML]{3166FF}{\color[HTML]{FFFFFF} \textbf{7}} & \cellcolor[HTML]{3166FF}{\color[HTML]{FFFFFF} \textbf{8}} & \cellcolor[HTML]{3166FF}{\color[HTML]{FFFFFF} \textbf{9}} \\ \hline
-{\color[HTML]{FFFFFF} \textbf{2}} & {\color[HTML]{333333} 4} & {\color[HTML]{333333} 6} & {\color[HTML]{333333} 8} & {\color[HTML]{333333} 10} & {\color[HTML]{333333} 12} & {\color[HTML]{333333} 14} & {\color[HTML]{333333} 16} & {\color[HTML]{333333} 18} \\ \hline
-{\color[HTML]{FFFFFF} \textbf{3}} & {\color[HTML]{333333} 6} & {\color[HTML]{333333} 9} & {\color[HTML]{333333} 12} & {\color[HTML]{333333} 15} & {\color[HTML]{333333} 18} & {\color[HTML]{333333} 21} & {\color[HTML]{333333} 24} & {\color[HTML]{333333} 27} \\ \hline
-{\color[HTML]{FFFFFF} \textbf{4}} & {\color[HTML]{333333} 8} & {\color[HTML]{333333} 12} & {\color[HTML]{333333} 16} & {\color[HTML]{333333} 20} & {\color[HTML]{333333} 24} & {\color[HTML]{333333} 28} & {\color[HTML]{333333} 32} & {\color[HTML]{333333} 36} \\ \hline
-{\color[HTML]{FFFFFF} \textbf{5}} & {\color[HTML]{333333} 10} & {\color[HTML]{333333} 15} & {\color[HTML]{333333} 20} & {\color[HTML]{333333} 25} & {\color[HTML]{333333} 30} & {\color[HTML]{333333} 35} & {\color[HTML]{333333} 40} & {\color[HTML]{333333} 45} \\ \hline
-{\color[HTML]{FFFFFF} \textbf{6}} & {\color[HTML]{333333} 12} & {\color[HTML]{333333} 18} & {\color[HTML]{333333} 24} & {\color[HTML]{333333} 30} & {\color[HTML]{333333} 36} & {\color[HTML]{333333} 42} & {\color[HTML]{333333} 48} & {\color[HTML]{333333} 54} \\ \hline
-{\color[HTML]{FFFFFF} \textbf{7}} & {\color[HTML]{333333} 14} & {\color[HTML]{333333} 21} & {\color[HTML]{333333} 28} & {\color[HTML]{333333} 35} & {\color[HTML]{333333} 42} & {\color[HTML]{333333} 49} & {\color[HTML]{333333} 56} & {\color[HTML]{333333} 63} \\ \hline
-{\color[HTML]{FFFFFF} \textbf{8}} & {\color[HTML]{333333} 16} & {\color[HTML]{333333} 24} & {\color[HTML]{333333} 32} & {\color[HTML]{333333} 40} & {\color[HTML]{333333} 48} & {\color[HTML]{333333} 56} & {\color[HTML]{333333} 64} & {\color[HTML]{333333} 72} \\ \hline
-{\color[HTML]{FFFFFF} \textbf{9}} & {\color[HTML]{333333} 18} & {\color[HTML]{333333} 27} & {\color[HTML]{333333} 36} & {\color[HTML]{333333} 45} & {\color[HTML]{333333} 54} & {\color[HTML]{333333} 63} & {\color[HTML]{333333} 72} & {\color[HTML]{333333} 81} \\ \hline
+	 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 \\
+\hline
+	2 & 4 & 6 & 8 & 10 & 12 & 14 & 16 & 18 \\
+\hline
+	3 & 6 & 9 & 12 & 15 & 18 & 21 & 24 & 27 \\
+\hline
+	4 & 8 & 12 & 16 & 20 & 24 & 28 & 32 & 36 \\
+\hline
+	5 & 10 & 15 & 20 & 25 & 30 & 35 & 40 & 45 \\
+\hline
+	6 & 12 & 18 & 24 & 30 & 36 & 42 & 48 & 54 \\
+\hline
+	7 & 14 & 21 & 28 & 35 & 42 & 49 & 56 & 63 \\
+\hline
+	8 & 16 & 24 & 32 & 40 & 48 & 56 & 64 & 72 \\
+\hline
+	9 & 18 & 27 & 36 & 45 & 54 & 63 & 72 & 81 \\
+\hline
 \end{tabular}
 }
 \end{table}

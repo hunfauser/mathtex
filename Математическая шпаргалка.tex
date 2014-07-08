@@ -8,19 +8,14 @@
 
 % Дополнительная работа с математикой
 \usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} % AMS
-\usepackage{icomma} % "Умная" запятая
+\usepackage{icomma}                                    % "Умная" запятая
 
-%% Шрифты
-\usepackage{euscript}	 % Шрифт Евклид
-\usepackage{mathrsfs}    % Красивый матшрифт
+% Шрифты
+\usepackage{euscript} % Шрифт Евклид
+\usepackage{mathrsfs} % Красивый матшрифт
 
-%% Перенос знаков в формулах (по Львовскому)
-\newcommand*{\hm}[1]{#1\nobreak\discretionary{}
-{\hbox{$\mathsurround=0pt #1$}}{}}
-
-%%% Заголовок
-\author{Hun Fauser}
 \title{Математическая шпаргалка}
+\author{Hun Fauser}
 \date{\today}
 
 \begin{document} % Конец преамбулы, начало текста.
@@ -52,6 +47,19 @@ a^n \times a^m &= a^{n + m} \\
 \sqrt{nm} &= \sqrt{n} \times \sqrt{m} \\
 \sqrt\frac{a}{b} &= \frac{\sqrt{a}}{\sqrt{b}} \\
 \left( \sqrt[m]a \right)^n &= \sqrt[m]{a^n}
+\end{align*}
+
+\section{Свойства логарифмов}
+
+\begin{align*}
+\log_{a}1 &= 0 \\
+\log_{a}(x_{1} \times x_{2}) &= \log_{a}|x_{1}| + \log_{a}|x_{2}| \\
+\log_{a}\frac{x_{1}}{x_{2}} &= \log_{a}|x_{1}| - \log_{a}|x_{2}| \\
+\log_{a}x^p &= p\log_{a}x \\
+\log_{a}x &= \frac{\log_{b}x}{\log_{b}a} \\
+\log_{a^q}x &= \frac{1}{q}\log_{a}x \\
+\lg10^n &= n \\
+\ln{e^n} &= n
 \end{align*}
 
 \section{Арифметическая прогрессия}

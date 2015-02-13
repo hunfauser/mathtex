@@ -14,6 +14,28 @@
 \usepackage{euscript} % Шрифт Евклид
 \usepackage{mathrsfs} % Красивый матшрифт
 
+% Убрать вертикальный отступ у списков
+\usepackage{enumitem}
+\setlist{nolistsep}
+
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[usenames,dvipsnames,svgnames,table,rgb]{xcolor}
+\hypersetup{				                                  % Гиперссылки
+	unicode=true,                                            % русские буквы в раздела PDF
+	pdftitle={Заголовок},                                % Заголовок
+	pdfauthor={Автор},                                   % Автор
+	pdfsubject={Тема},                                    % Тема
+	pdfcreator={Создатель},                          % Создатель
+	pdfproducer={Производитель},              % Производитель
+	pdfkeywords={keyword1} {key2} {key3}, % Ключевые слова
+	colorlinks=true,       	                                 % false: ссылки в рамках; true: цветные ссылки
+	linkcolor=red,                                            % внутренние ссылки
+	citecolor=green,                                        % на библиографию
+	filecolor=magenta,                                    % на файлы
+	urlcolor=blue                                             % на URL
+}
+
 \title{Statistika}
 \author{Hun Fauser}
 \date{\today}
@@ -55,6 +77,201 @@ Určitý pokus (hod kostkou) může být mnohonásobně (N-krát) opakovan
 za neměnných podmínek - N pokusů. Jestliže se u N pokusů vyskytne jev A (padne číslo 6)
 M-krát, poměr $\dfrac{M}{N}$ je relativní četností jevu A.
 
+\newpage
+\Large \textbf{Seminar}
+
+\normalsize
+Matematika - z řeckého jazyka
+
+Matematika je věda zabývající se z formálního hlediska kvantitou, 
+strukturou, prostorem a změnou. \\
+
+Charakteristickou vlastnosti matematiky je její důraz 
+na absolutní přesnost metod a nezpochybnitelnost výsledků \\
+
+Historie matematiky sahá až do pravěku, kdy vznikly první abstraktní 
+matematické pojmy - čisla. \\
+
+Nula - nepřirozené číslo
+
+Eukleides z Megary - řecký matematik, 4-3st. před n.l. Zakladatel matematiky.
+
+Leonardo Fibonacci - arabské čislice. 13st.
+
+Matematika je univerzální jazyk.
+
+Existuje jenom jedna forma matematiky. \\
+
+Elementární matematika
+\begin{itemize}
+	\item Operace s čísly
+	\item Rovnice
+	\item Geometrické objekty \\
+\end{itemize}
+
+Aplikovaná matematika
+\begin{itemize}
+	\item Ekonomie
+	\item Statistika
+	\item Chemie \\
+\end{itemize}
+
+Čistá matematika - vysoce abstraktní věda. Nepraktická.
+
+V matematice se využivá řecká abeceda a symboly.
+
+Konstanta - dané čislo. Nemusí být známá.
+
+Opakem konstanty je proměnná
+
+\begin{align*}
+\pi = 3.141592654 \\
+e = 2.718281828 \\
+\phi = 1.618033989 \\
+\end{align*}
+
+\newpage
+\textbf{Eulerovo číslo}
+
+Eulerovo číslo jako limita následující posloupnosti:
+\[
+	e = \lim_{n\to\infty} \left(1 + \frac{1}{n} \right)^n
+\]
+
+Eulerovo číslo jako součet následující nekonečné řady.
+\[
+e = \sum_{n=0}^{\infty} \frac{1}{n!} = \frac{1}{0!} + \frac{1}{1!} + \frac{1}{2!} + \frac{1}{3!} + \frac{1}{4!} + ...
+\]
+
+Eulerovo číslo jako jediné číslo x > 0, pro které platí, že:
+\[
+\ln x = \displaystyle\int_{1}^{x} \frac{dt}{t} = 1
+\]
+
+Výrok
+\begin{itemize}
+	\item Je tokové tvrzení, o kterém lze jednoznačně rozhodnout, zda je to pravdivě nebo ne
+	\item Označuje se malými pismeny latinské abecedy
+	\item Jeho platnost se označuje číslem 1
+	\item Neplatnost 0 \\
+\end{itemize}
+
+Výroky
+\begin{itemize}
+	\item Jednoduché (nedelitelné)
+	\item Složené \\
+\end{itemize}
+
+Jednoduché výroky
+\begin{itemize}
+	\item 3<5 (1) - platí
+	\item 2>3 (0) - neplatí \\
+\end{itemize}
+
+Symbol negace - —
+
+Slovně "není pravda" \\
+
+Logické operace
+\begin{align*}
+Konjunkce~a \wedge b \\
+Disjunkce~a \vee b \\
+Implikace~a \Rightarrow b \\
+Ekvivalence~ a \Leftrightarrow	b
+\end{align*}
+
+Výroková forma - vyraz, který obsahuje jednu nebo vice proměnných z 
+daného, předem určeného souboru, který se po dosažení 
+konkretních hodnot proměnných stane výrokem.
+
+\newpage
+Kvantifikatory
+\begin{itemize}
+	\item Velký
+	\item Malý \\
+\end{itemize}
+
+Obecný
+\begin{itemize}
+	\item Daná vlastnost platí pro každý prvek
+	\item Výroky, které obsahují obecný kvantifikator se nazývají obecné výroky \\
+\end{itemize}
+
+\begin{table}[h]
+	\centering
+	\resizebox{0.7\textwidth}{!}{%
+		\begin{tabular}{|l|l|}
+			\hline
+			\textbf{Výrok}   & \textbf{Negace výroku} \\ \hline
+			Každý...je       & Aspoň jeden...není     \\ \hline
+			Aspoň jeden...je & Žádný...není           \\ \hline
+			Aspoň n...je     & Nejvýše...je           \\ \hline
+			Nejvýše n...je   & Aspoň...je             \\ \hline
+			Právě n...je     &                        \\ \hline
+		\end{tabular}
+	}
+\end{table}
+
+\textbf{Statistika}
+
+Status - stav
+\begin{itemize}
+	\item Čiselné udaje
+	\item Praktická činnost
+	\item Vědní disciplina \\
+\end{itemize}
+
+\href{http://czso.cz}{Český Statistický Úřad} \\
+
+Statistické charakterisky
+\begin{itemize}
+	\item Miry polohy
+	\item Miry variability (s nedefinovanou proměnlivostí uvnitř souboru dat, s definovanou proměnlivostí uvnitř souboru dat) \\
+\end{itemize}
+
+\begin{align*}
+a(x) : (x + 1)^2 = x^2 + 2x+1; x \in R \\
+\forall	((x^2 - 1) - (x + 1)(x - 1)); x \in R \\
+\exists	(x^2 + 1 = 0); x \in R \\
+f(x) = \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{(x - \mu)^2}{2 \sigma^2}}
+\end{align*}
+
+\newpage
+Aritmetický průměr $\overline{x}$ střední hodnota kvantitativního
+statistického znaku 
+
+(součet hodnot, dělený jejích počtem)
+
+\[
+	\overline{x} = \frac{\sum x_{i}}{n}
+\]
+
+, kde \textbf{n} je rozsah souboru \\
+
+Modus \^{x} - hodnota nejčastěji se v souboru vyskytující
+
+Median \~{x} = prostřední hodnota  $\Rightarrow$ je-li n(rozsah souboru) 
+liché číslo, median je prostřední hodnota, je-li n sudé číslo
+je median aritmetickým průměrem dvou prostředních hodnot. \\
+
+100P\% kvantil $x_{p}$ je číslo, které odděluje 100P\% nejmenších hodnot
+náhodné veličiny X.
+
+Tedy 50\% kvantil $x_{0.50}$ je totež co medián \\
+
+Dobrý popis rozdělení pravděpodobnosti dostaneme stanovením dostatečného počtu kvantilů.
+
+Kvantily zaznamenané po dvaceti pěti procentech nazýváme kvartily,
+po deseti procentech decily a po jednom procentu percentily.
+
+Tedy 25\% kvantil je 1. kvartil (dolní kvartil), 10\% kvantil je 1. decil a podobně 1\% 
+kvantil je 1. percentil
+
+Medián je totéž co 50\% kvantil, 2. kvartil, 5. decil nebo 50. percentil.
+
+S použitím kvartilů. decilů a percentilů se často setkáváme při prezentaci výsledků
+antropometrických studií.
+ 
 
 
 
@@ -66,5 +283,39 @@ M-krát, poměr $\dfrac{M}{N}$ je relativní četností jevu A.
 
 
 
+
+
+
+\newpage
+\section{MATH TWEAKS}
+
+
+\subsection{Number 01}
+\begin{align*}
+	A &= 100\% ~~~~~
+	B = x \\
+	x &= \frac{B \times 100}{A}
+\end{align*}
+
+\subsection{Number 02}
+\begin{align*}
+A &= 100\% ~~~~~
+x = y\% \\
+x &= \frac{A}{B} \times y
+\end{align*}
+
+\subsection{Number 03}
+\begin{align*}
+A + B &= 110 \\
+A &= B + 100 \\
+(вместо~А~подставляем~B &+ 100~в~первое~уравнение) \\
+B + 100 + B &= 110 \\
+2B &= 10 \\
+B = \frac{10}{2} &= 5 \\
+(подставляем~ответ~&B~во~второе~уравнение) \\
+A = 5 + 100 &= 105 \\
+Ответ:
+B = 5; A &= 105;
+\end{align*}
 
 \end{document} % Конец текста.

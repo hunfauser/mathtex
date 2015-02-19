@@ -1,0 +1,460 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{cmap}					% поиск в PDF
+\usepackage{mathtext} 				% русские буквы в формулах
+\usepackage[T2A]{fontenc}			% кодировка
+\usepackage[utf8]{inputenc}			% кодировка исходного текста
+\usepackage[english,russian]{babel}	% локализация и переносы
+
+% Дополнительная работа с математикой
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} % AMS
+\usepackage{icomma}                                    % "Умная" запятая
+
+% Шрифты
+\usepackage{euscript} % Шрифт Евклид
+\usepackage{mathrsfs} % Матшрифт
+
+% Заголовок
+\author{Hun Fauser}
+\title{Sbírka příkladů z matematiky k přijímacím zkouškám na VŠ - решебник}
+\date{\today}
+
+\begin{document} % Конец преамбулы, начало текста.
+
+\maketitle
+
+\section{Algebraické výrazy a jejich úpravy}
+
+\subsection{} % задания 1(a-c)
+
+\begin{align*}
+a^2 \times a^4 \times a^3 
+= a^{2 + 4 + 3} 
+&= a^9 \\[6pt]
+%===%
+\frac{b^5 \times b^6}{b^2} 
+= b^{5 + 6 - 2} 
+&= b^9 \\[6pt]
+%===%
+(c^{-3})^9 
+= c^{-3 \times 9} 
+= c^{-27} 
+&= \frac{1}{c^{27}}
+\end{align*}
+
+\subsection{} % задания 2(a-c)
+
+\begin{align*}
+%===%
+(2x^3)^4 + (x^7)^2 \times x^{-2} 
+= 16x^{12} + x^{14} \times x^{-2} 
+= 16x^{12} + x^{12} 
+&= 17x^{12} \\[6pt]
+%===%
+(3x^2)^3 x^4 - (2x^2)^5 
+= 27x^6 \times x^4 - 32x^{10} 
+= 27x^{10} - 32 x^{10} 
+&= -5x^{10} \\[6pt]
+%===%
+(x^6)(-2x^{-3})^4 + (4x^{-3})^2 
+= (x^6) \left( \frac{16}{x^{12}} \right) + \frac{16}{x^6} 
+= \frac{16}{x^{12 - 6}} + \frac{16}{x^6} 
+&= \frac{32}{x^{6}}
+\end{align*}
+
+\subsection{} % задания 3(a-c)
+
+\begin{align*}
+\frac{a^0 \times a^{2n - 5}}{a^{1 - n}} 
+= a^{2n - 5 - 1 + n} 
+&= a^{3n - 6} \\[6pt]
+%===%
+\frac{a^{2n + 3} \times a^{3n - 2}}{(a^n)^2} 
+= a^{2n + 3 + 3n - 2 - 2n} 
+&= a^{3n + 1} \\[6pt]
+%===%
+\frac{a^{1 - 4n} \times (a^{n + 2})^2}{a^{3n - 1}} 
+= \frac{a^{1 - 4n} \times a^{2n + 4}}{a^{3n - 1}} 
+= a^{1 - 4n + 2n + 4 - 3n + 1} 
+&= a^{6 - 5n} 
+\end{align*}
+
+\subsection{} % задания 4(a-e)
+
+\begin{align*}
+\frac{18^4 \times 27^{-4} \times 49^2}{14^3} 
+= 3^8 \times 2^4 \times 3^{-12} \times 7^4 \times 7^{-3} \times 2^{-3}= \\[6pt] 
+= 3^{8 - 12} \times 2^{4 - 3} \times 7^{4 - 3}
+= \frac{2 \times 7}{3^4} 
+&= \frac{14}{81} \\[6pt]
+%===%
+\frac{20^{-3} \times 38^0 \times 100^2}{16^{-2} \times 2^5} 
+= 10^{-3} \times 2^{-3} \times 10^4 \times 2^8 \times 2^{-5}= \\[6pt] 
+= 10^{-3 + 4} \times 2^{-3 + 8 - 5}
+= 10 \times 1 
+&= 10 \\[6pt]
+%=====%
+\frac{88^3 \times 55^{-2} \times 10000^{-1}}{25^{-3} \times 22} 
+= 2^9 \times 11^3 \times 5^{-2} \times 11^{-2} \times 5^{-4} \times 2^{-4} \times 5^6 \times 2^{-1} \times 11^{-1}= \\[6pt]
+= 2^{9 - 4 - 1} \times 11^{3 - 2 - 1} \times 5^{-2 - 4 + 6}
+= 2^4 \times 11^0 \times 5^0
+&= 16 \\[6pt]
+%=====%
+\frac{(-4)^3}{3^2} \div \frac{(-2)^4}{3^5}
+= (-2)^6 \times 3^{-2} \times 3^5 \times (-2)^{-4}= \\[6pt]
+= (-2)^{6 - 4} \times 3^{-2 + 5} 
+= 4 \times 27
+&= 108  \\[6pt]
+%=====%
+\frac{2^{-6} \times 3^{-2} \times 5^3}{(2^{-4} \times 5^3)^2 \div 3^4}
+= \frac{2^{-6} \times 3^{-2} \times 5^3 \times 3^4}{2^{-8} \times 5^6}
+= \frac{2^8 \times 5^3 \times 3^4}{2^6 \times 5^6 \times 3^2} = \\[6pt]
+= 2^{8 - 6} \times 5^{3 - 6} \times 3^{4 - 2}
+= 4 \times \frac{1}{125} \times 9
+&= \frac{36}{125}
+%=====%
+\end{align*}
+
+\subsection{} % задания 5(a-с)
+
+\begin{align*}
+\left( \frac{a^{-2}b^4c^{-1}}{d^3} \right)^{-3} \div \left( \frac{d^4}{c^5} \right)^{-2} 
+= \frac{d^9}{a^{-6}b^{12}c^{-3}} \times \frac{d^8}{c^{10}}
+&= \frac{a^6 d^{17}}{b^{12} c^7} \\[6pt]
+%===%
+\left( \frac{a^2 c^3}{b^4 d^0} \right)^{-2} \div \left( \frac{b^4}{d^{-3}} \right)^3
+= \frac{b^8}{a^4 c^6} \times \frac{d^{-9}}{b^{12}}
+= \frac{b^{-4} d^{-9}}{a^4 c^6}
+&= \frac{1}{a^4 b^4 c^6 d^9} \\[6pt]
+%===%
+\left( \frac{b^3}{a^4b^{-1}c^2} \right)^{-4} \div \left( \frac{a^2b^{-3}}{a^{-4}c^2} \right)^{-2}
+= \left( \frac{a^{16}b^{-4}c^8}{b^{12}} \right) \times \left( \frac{a^4b^{-6}}{a^{-8}c^4} \right)
+= \frac{a^{16 + 4 + 8} \times c^{8 - 4}}{b^{12 + 4 + 6}}
+&= \frac{a^{28}c^4}{b^{22}}
+\end{align*}
+
+\subsection{} % задания 6(a-f)
+
+\begin{align*}
+\sqrt{2} - \sqrt{18} + \sqrt{32} + \sqrt{98}
+= \sqrt{2} - 3\sqrt{2} + 4\sqrt{2} + 7\sqrt{2} = \\[6pt]
+= (1 - 3 + 4 + 7)\sqrt{2}
+&= 9\sqrt{2} \\[6pt]
+%===%
+\sqrt{175} - (\sqrt{8} - \sqrt{7} + \sqrt{28})
+= 5\sqrt{7} - 2\sqrt{2} + \sqrt{7} - 2\sqrt{7} = \\[6pt]
+= (5 + 1 - 2)\sqrt{7} - 2\sqrt{2}
+&= 4\sqrt{7} - 2\sqrt{2} \\[6pt]
+%===%
+\sqrt{90} + \sqrt{160} - (\sqrt{63} + \sqrt{10})
+= 3\sqrt{10} + 4\sqrt{10} - 3\sqrt{7} - \sqrt{10} = \\[6pt]
+= (3 + 4 - 1)\sqrt{10} - 3\sqrt{7}
+&= 6\sqrt{10} - 3\sqrt{7} \\[6pt]
+%===%
+2 \times 8^{\frac{1}{2}} - 7 \times 8^{\frac{1}{2}} + 5 \times 72^{\frac{1}{2}} - 50^{\frac{1}{2}}
+= 4\sqrt{2} - 14\sqrt{2} + 30\sqrt{2} - 5\sqrt{2} = \\[6pt]
+= (4 - 14 + 30 - 5)\sqrt{2}
+&= 15\sqrt{2} \\[6pt]
+%===%
+2^{\frac{1}{2}} \times 4^{\frac{1}{3}} \times 8^{\frac{1}{4}} \times 16^{\frac{1}{6}} \times 32^{\frac{1}{12}}
+= 2^{\frac{1}{2}} \times 2^{\frac{2}{3}} \times 2^{\frac{3}{4}} \times 2^{\frac{4}{6}} \times 2^{\frac{5}{12}}
+= 2^{\frac{6 + 8 + 9 + 8 + 5}{12}}
+= 2^{\frac{36}{12}}
+= 2^{3}
+&= 8 \\[6pt]
+%===%
+[2 \times (2 \times 2^{\frac{1}{2}})^{\frac{1}{2}}]^{\frac{1}{2}}
+= 2^{\frac{1}{2}} \times 2^{\frac{1}{4}} \times 2^{\frac{1}{8}}
+= 2^{\frac{4 + 2 + 1}{8}}
+= \sqrt[8]{2^7}
+\end{align*}
+
+\subsection{} % задания 7(a-c)
+
+\begin{align*}
+\sqrt[3]{54} + \sqrt[3]{16} - \sqrt[3]{2} + \sqrt[3]{64}
+= 3\sqrt[3]{2} + 2\sqrt[3]{2} - \sqrt[3]{2} + 4 = \\[6pt]
+= (3 + 2 - 1)\sqrt[3]{2} + 4 
+&= 4\sqrt[3]{2} + 4 \\[6pt]
+%===%
+\sqrt[3]{24} - (\sqrt[3]{3} - \sqrt[3]{81}) - \sqrt[3]{9}
+= 2\sqrt[3]{3} - \sqrt[3]{3} + 3\sqrt[3]{3} - \sqrt[3]{9} = \\[6pt]
+= (2 - 1 + 3)\sqrt[3]{3} - \sqrt[3]{9}
+&= 4\sqrt[3]{3} - \sqrt[3]{9} \\[6pt]
+%===%
+\sqrt[3]{250} - (\sqrt[3]{40} + \sqrt[3]{16}) + \sqrt[3]{135}
+= 5\sqrt[3]{2} - 2\sqrt[3]{5} - 2\sqrt[3]{2} + 3\sqrt[3]{5} = \\[6pt]
+= (5 - 2)\sqrt[3]{2} + (-2 + 3)\sqrt[3]{5}
+&= 3\sqrt[3]{2} + \sqrt[3]{5}
+\end{align*}
+
+\subsection{} % задания 8(a-d)
+
+\begin{align*}
+\sqrt{x} \times \sqrt[3]{x} \times \sqrt[7]{x}
+= x^{\frac{1}{2} + \frac{1}{3} + \frac{1}{7}}
+= x^{\frac{21 + 14 + 6}{42}}
+= x^{\frac{41}{42}}
+&= \sqrt[42]{x^{41}} \\[6pt]
+%===%
+\sqrt{\frac{\sqrt[3]{x}}{\sqrt[6]{x}}}
+= x^{\frac{1}{6} - \frac{1}{12}}
+= x^{\frac{2 - 1}{12}}
+&= \sqrt[12]{x} \\[6pt]
+%===%
+\frac{\sqrt[4]{x \times \sqrt[3]{x}}}{\sqrt[3]{x^4 \times \sqrt{x}}}
+= \frac{x^{\frac{1}{4}} \times x^{\frac{1}{12}}}{x^{\frac{4}{3}} \times x^{\frac{1}{3}}} 
+= x^{\frac{3 + 1 - 16 - 4}{12}}
+= x^{\frac{-16}{12}}
+&= \frac{1}{\sqrt[3]{x^4}} \\[6pt]
+%===%
+\sqrt{a \times \sqrt{a \times \sqrt{a \times \sqrt{a}}}}
+= a^{\frac{1}{2}} \times a^{\frac{1}{4}} \times a^{\frac{1}{8}} \times a^{\frac{1}{16}}
+= a^{\frac{8 + 4 + 2 + 1}{16}}
+= a^{\frac{15}{16}}
+&= a\sqrt[16]{a^{15}}
+\end{align*}
+
+\subsection{} % задания 9(a-c)
+
+\begin{align*}
+\sqrt{\frac{b\sqrt[3]{b}}{\sqrt{b}}} \div \left( \frac{a^{-\frac{1}{3}}b^{\frac{1}{2}}}{b^2} \right)^3
+= \frac{b^{\frac{1}{2}}b^{\frac{1}{6}}}{b^{\frac{1}{4}}} \times \frac{b^6a}{b^{\frac{3}{2}}}
+= b^{\frac{6 + 2 - 3}{12}} \times ab^{\frac{72 - 18}{12}}
+= ab^{\frac{5 + 54}{12}}
+= ab^{\frac{59}{12}}
+&= ab^4\sqrt[12]{b^{11}} \\[6pt]
+%===%
+\sqrt[3]{\frac{a\sqrt[3]{a}}{\sqrt{b}}} \times \left( \frac{a^{-\frac{1}{2}}b^{\frac{1}{3}}}{a^2} \right)^6
+= \frac{a^{\frac{1}{3}}a^{\frac{1}{9}}}{b^{\frac{1}{6}}} \times \frac{a^{-3}b^{2}}{a^{12}}
+= a^{\frac{3 + 1 - 27 - 108}{9}}b^{\frac{-1 + 12}{6}}
+= a^{-\frac{131}{9}}b^{\frac{11}{6}}
+&= \frac{b \sqrt[6]{b^5}}{a^{14}\sqrt[9]{a^5}} \\[6pt]
+%===%
+\sqrt[3]{\frac{\sqrt{a}}{\sqrt[3]{b}}} \div \left( \frac{a^{\frac{1}{3}}b^{-1}}{a^{-\frac{1}{2}}} \right)^{\frac{1}{2}}
+= \frac{a^{\frac{1}{6}}}{b^{\frac{1}{9}}} \times \frac{b^{\frac{1}{2}}}{a^{\frac{1}{6}}a^{\frac{1}{4}}}
+= a^{\frac{2 - 2 - 3}{12}}b^{\frac{-2 + 9}{18}}
+= \frac{b^{\frac{7}{18}}}{a^{\frac{1}{4}}}
+&= \frac{\sqrt[18]{b^7}}{\sqrt[4]{a}}
+\end{align*}
+
+\subsection{} % задания 10(a-m)
+
+\begin{align*}
+(2^{\sqrt{3}} \times 2^2)^{2 - \sqrt{3}}
+= 2^{2\sqrt{3} - 3 + 4 - 2\sqrt{3}}
+&= 2 \\[6pt]
+%===%
+\left( \frac{3^{\sqrt{7}}}{3^{\sqrt{5}}} \right)^{\sqrt{5} + \sqrt{7}}
+= 3^{\sqrt{35} + 7 - 5 - \sqrt{35}}
+= 3^2
+&= 9
+ \\[6pt]
+%===%
+\left[ (1 + \sqrt{2})^{1 - \sqrt{2}} \right]^{1 + \sqrt{2}}
+= (1 + \sqrt{2})^{-1}
+&= \frac{1}{1 + \sqrt{2}} \\[6pt]
+%===%
+\left( \sqrt{a^{1 + \sqrt{3}}} \right)^{1 - \sqrt{3}} \times a^{\frac{3}{2}}
+= \left( a^{\frac{1 + \sqrt{3}}{2}} \right)^{1 - \sqrt{3}} \times a^{\frac{3}{2}}
+= a^{\frac{-2 + 3}{2}}
+&= \sqrt{a} \\[6pt]
+%===%
+\frac{\left( \sqrt{2} + 1 \right)^3 + \left( \sqrt{2} - 1 \right)^3}{2\sqrt{2}}
+= \frac{2\sqrt{2} + 6 + 3\sqrt{2} + 1 + 2\sqrt{2} - 6 + 3\sqrt{2} - 1}{2\sqrt{2}}= \\[6pt]
+= \frac{10\sqrt{2}}{2\sqrt{2}}
+&= 5 \\[6pt]
+%===%
+[4^{-\frac{1}{4}} + (2^{1.5})^{-\frac{4}{3}}] \times [4^{-0.25} - (2\sqrt{2})^{-\frac{4}{3}}]
+= \left( \frac{1}{\sqrt{2}} + \frac{1}{4} \right) \times \left( \frac{1}{\sqrt{2}} - \frac{1}{4} \right)= \\[6pt]
+= \frac{(2\sqrt{2} + 1) \times (2\sqrt{2} - 1)}{16}
+&= \frac{7}{16} \\[6pt]
+%===%
+a^{\sqrt{5} + 1} \times \left( \frac{1}{a} \right)^{\sqrt{5} - 1}
+= a^{\sqrt{5} + 1 - \sqrt{5} + 1}
+&= a^2 \\[6pt]
+%===%
+\left[ \left( \frac{1}{3} \right)^{\sqrt{2}} \right]^{-\sqrt{8}}
+= 3^4
+&= 81 \\[6pt]
+%===%
+\left[ \left( \sqrt[3]{3} \right)^{\sqrt{3}} \right]^{-2\sqrt{3}}
+= \left( \frac{1}{3^{\frac{1}{3}}} \right)^6
+&= \frac{1}{9} \\[6pt]
+%===%
+52^2 - 49^2
+= 2704 - 2401
+&= 303 \\[6pt]
+%===%
+205^2 - 204^2
+= 42025 - 41616
+&= 409 \\[6pt]
+%===%
+\frac{10^{10} - 10^6}{10^4 + 10^2}
+= \frac{9.999 \times 10^9}{10100}
+&= 99 \times 10^4
+\end{align*}
+
+\subsection{} % задания 11(a-h)
+
+\begin{align*}
+\frac{1}{\sqrt{5}}
+= \frac{1}{\sqrt{5}} \times \frac{\sqrt{5}}{\sqrt{5}}
+&= \frac{\sqrt{5}}{5} \\[6pt]
+%===%
+\frac{1}{\sqrt{8}}
+= \frac{1}{\sqrt{8}} \times \frac{\sqrt{8}}{\sqrt{8}}
+= \frac{\sqrt{8}}{8}
+&= \frac{\sqrt{2}}{4} \\[6pt]
+%===%
+\frac{1}{\sqrt{12}}
+= \frac{1}{\sqrt{12}} \times \frac{\sqrt{12}}{\sqrt{12}}
+= \frac{\sqrt{12}}{12}
+&= \frac{\sqrt{3}}{6} \\[6pt]
+%===%
+\frac{2}{6 - \sqrt{10}}
+= \frac{2}{6 - \sqrt{10}} \times \frac{6 + \sqrt{10}}{6 + \sqrt{10}}
+= \frac{12 + 2\sqrt{10}}{26}
+&= \frac{6 + \sqrt{10}}{13} \\[6pt]
+%===%
+\frac{6}{\sqrt{5} - \sqrt{3}}
+= \frac{6}{\sqrt{5} - \sqrt{3}} \times \frac{\sqrt{5} + \sqrt{3}}{\sqrt{5} + \sqrt{3}}
+= \frac{6(\sqrt{5} + \sqrt{3})}{2}
+&= 3(\sqrt{5} + \sqrt{3}) \\[6pt]
+%===%
+\frac{1}{\sqrt{2}} - \frac{1}{\sqrt{2} - \sqrt{3}}
+= \frac{1}{\sqrt{2}} \times \frac{\sqrt{2}}{\sqrt{2}} - \frac{1}{\sqrt{2} - \sqrt{3}} \times \frac{\sqrt{2} + \sqrt{3}}{\sqrt{2} + \sqrt{3}}= \\[6pt]
+= \frac{\sqrt{2}}{2} + \sqrt{2} + \sqrt{3}
+= \frac{3\sqrt{2} + 2\sqrt{3}}{2} \\[6pt]
+%===%
+\frac{1}{\sqrt{3}} - \frac{1}{3 + \sqrt{3}}
+= \frac{1}{\sqrt{3}} \times \frac{\sqrt{3}}{\sqrt{3}} - \frac{1}{3 + \sqrt{3}} \times \frac{3 - \sqrt{3}}{3 - \sqrt{3}}= \\[6pt]
+= \frac{\sqrt{3}}{3} - \frac{3 - \sqrt{3}}{6}
+= \frac{3(\sqrt{3} - 1)}{6}
+&= \frac{\sqrt{3} - 1}{2} \\[6pt]
+%===%
+\frac{1}{\sqrt{8}} + \frac{1}{8 - \sqrt{8}}
+= \frac{1}{\sqrt{8}} \times \frac{\sqrt{8}}{\sqrt{8}} + \frac{1}{8 - \sqrt{8}} \times \frac{8 + \sqrt{8}}{8 + \sqrt{8}}
+= \frac{2\sqrt{2}}{8} + \frac{8 + 2\sqrt{2}}{56}= \\[6pt]
+= \frac{\sqrt{2}}{4} + \frac{4 + \sqrt{2}}{28}
+= \frac{8\sqrt{2} + 4}{28}
+&= \frac{2\sqrt{2} + 1}{7}
+\end{align*}
+
+\section{Rovnice a nerovnice}
+
+\section{Kvadratické rovnice a nerovnice}
+
+\section{Iracionální rovnice}
+
+\subsection{} % задания 1(a-f)
+
+\begin{align*} % задание a
+\sqrt{7 - 3x} &= 2; \\
+7 - 3x &= 4; \\
+-3x &= -3; \\
+x &= 1;
+\end{align*}
+
+\begin{center}
+-----------------------------------------------
+\end{center}
+
+\begin{align*} % задание b
+\sqrt{-7x - 5} &= 3; \\
+-7x - 5 &= 9; \\
+-7x &= 14; \\
+x &= -2;
+\end{align*}
+
+\begin{center}
+-----------------------------------------------
+\end{center}
+
+\begin{align*} % задание c
+\sqrt{10 - 2x} &= 1 - x; ~(x \leq 1) \\
+10 - 2x &= 1 - 2x + x^2; \\
+-x^2 - 2x + 2x &= 1 - 10; \\
+x^2 &= 9; \\
+x &= -3; ~(x \leq 1)
+\end{align*}
+
+\begin{center}
+-----------------------------------------------
+\end{center}
+
+\begin{align*} % задание d ПРОВЕРИТЬ
+\sqrt{4x - 29} &= x + 2; ~(x \geq 2) \\
+4x - 29 &= x^2 + 4x + 4; \\
+-x^2 + 4x - 4x &= 4 + 29; \\
+x^2 &= -33; ~\varnothing
+\end{align*}
+
+\begin{align*} % задание e
+\sqrt{x + 10} &= x + 4; (x \geq -4) \\
+x + 10 &= x^2 + 8x + 16; \\
+-x^2 + x - 8x + 10 - 16 &= 0; \\
+x^2 + 7x + 6 &= 0; \\
+D = 49 - 24 &= 25
+\end{align*}
+
+\[
+x_{1, 2} = \frac{-7 \pm 5}{2} =
+\left\{ 
+	\begin{aligned}
+		x_{1} &= -6; \varnothing ~(x \geq -4) \\
+		x_{2} &= -1;
+		\end{aligned}
+ \right.
+\]
+
+\begin{center}
+-----------------------------------------------
+\end{center}
+
+\begin{align*} % задание f
+\sqrt{x + 8} &= x + 2; (x \geq -2) \\
+x + 8 &= x^2 + 4x + 4; \\
+-x^2 + x - 4x - 4 + 8 &= 0; \\
+x^2 + 3x - 4 &= 0; \\
+D = 9 + 16 = 25; \\
+\end{align*}
+
+\[
+x_{1, 2} = \frac{-3 \pm 5}{2} =
+\left\{ 
+	\begin{aligned}
+		x_{1} &= -4; \varnothing ~(x \geq -2) \\
+		x_{2} &= 1;
+		\end{aligned}
+ \right.
+\]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document} % Конец текста.
+
+
+% \left( \frac{}{} \right)
+% ^{\frac{}{}}

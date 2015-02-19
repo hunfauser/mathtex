@@ -1,0 +1,55 @@
+\documentclass[landscape,12pt]{article}
+
+\usepackage{cmap}					% поиск в PDF
+\usepackage{mathtext} 				% русские буквы в формулах
+\usepackage[T2A]{fontenc}			% кодировка
+\usepackage[utf8]{inputenc}			% кодировка исходного текста
+\usepackage[english,russian]{babel}	% локализация и переносы
+
+% Дополнительная работа с математикой
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} % AMS
+\usepackage{icomma}                                    % "Умная" запятая
+
+% Шрифты
+\usepackage{euscript} % Шрифт Евклид
+\usepackage{mathrsfs} % Матшрифт
+
+% Работа с таблицами
+\usepackage{graphicx}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{multirow}
+
+\usepackage[]{geometry}
+
+% Заголовок
+\author{Hun Fauser}
+\title{Таблица степеней}
+\date{\today}
+
+\begin{document} % Конец преамбулы, начало текста.
+
+\maketitle
+
+\renewcommand{\arraystretch}{2}
+\begin{table}[h]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+	n & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 & 16 & 17 & 18 & 19 & 20\\
+\hline
+	$n^2$ & 1 & 4 & 9 & 16 & 25 & 36 & 49 & 64 & 81 & 100 & 121 & 144 & 169 & 196 & 225 & 256 & 289 & 324 & 361 & 400\\
+\hline
+	$n^3$ & 1 & 8 & 27 & 64 & 125 & 216 & 343 & 512 & 729 & 1000 & 1331 & 1728 & 2197 & 2744 & 3375 & 4096 & 4913 & 5832 & 6859 & 8000\\
+\hline
+	$n^4$ & 1 & 16 & 81 & 256 & 625 & 1296 & 2401 & 4096 & 6561 & 10000 & 14641 & 20736 & 28561 & 38416 & 50625 & 65536 & 83521 & 104976 & 130321 & 160000\\
+\hline
+	$n^5$ & 1 & 32 & 243 & 1024 & 3125 & 7776 & 16807 & 32768 & 59049 & 100000 & 161051 & 248832 & 371293 & 537824 & 759375 & 1048576 & 1419857 & 1889568 & 2476099 & 3200000\\
+\hline
+	$\sqrt{n}$ & 1 & 1.41 & 1.73 & 2 & 2.24 & 2.45 & 2.65 & 2.83 & 3 & 3.16 & 3.32 & 3.46 & 3.61 & 3.74 & 3.87 & 4 & 4.12 & 4.24 & 4.35 & 4.47\\
+\hline
+\end{tabular}
+}
+\end{table}
+
+\end{document} % Конец текста.

@@ -4,7 +4,7 @@
 \usepackage{mathtext} 				% русские буквы в формулах
 \usepackage[T2A]{fontenc}			% кодировка
 \usepackage[utf8]{inputenc}			% кодировка исходного текста
-\usepackage[english,russian]{babel}	% локализация и переносы
+\usepackage[english, russian, czech]{babel}	% локализация и переносы
 
 % Дополнительная работа с математикой
 \usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} % AMS
@@ -18,23 +18,26 @@
 \usepackage{enumitem}
 \setlist{nolistsep}
 
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows}
+
 \usepackage{graphicx}
 \usepackage{hyperref}
-\usepackage[usenames,dvipsnames,svgnames,table,rgb]{xcolor}
-\hypersetup{				                                  % Гиперссылки
-	unicode=true,                                            % русские буквы в раздела PDF
-	pdftitle={Заголовок},                                % Заголовок
-	pdfauthor={Автор},                                   % Автор
-	pdfsubject={Тема},                                    % Тема
-	pdfcreator={Создатель},                          % Создатель
-	pdfproducer={Производитель},              % Производитель
-	pdfkeywords={keyword1} {key2} {key3}, % Ключевые слова
-	colorlinks=true,       	                                 % false: ссылки в рамках; true: цветные ссылки
-	linkcolor=red,                                            % внутренние ссылки
-	citecolor=green,                                        % на библиографию
-	filecolor=magenta,                                    % на файлы
-	urlcolor=blue                                             % на URL
-}
+%\usepackage[usenames,dvipsnames,svgnames,table,rgb]{xcolor}
+%\hypersetup{				                                  % Гиперссылки
+%	unicode=true,                                            % русские буквы в раздела PDF
+%	pdftitle={Заголовок},                                % Заголовок
+%	pdfauthor={Автор},                                   % Автор
+%	pdfsubject={Тема},                                    % Тема
+%	pdfcreator={Создатель},                          % Создатель
+%	pdfproducer={Производитель},              % Производитель
+%	pdfkeywords={keyword1} {key2} {key3}, % Ключевые слова
+%	colorlinks=true,       	                                 % false: ссылки в рамках; true: цветные ссылки
+%	linkcolor=red,                                            % внутренние ссылки
+%	citecolor=green,                                        % на библиографию
+%	filecolor=magenta,                                    % на файлы
+%	urlcolor=blue                                             % на URL
+%}
 
 \title{Statistika}
 \author{Hun Fauser}
@@ -272,16 +275,204 @@ Medián je totéž co 50\% kvantil, 2. kvartil, 5. decil nebo 50. percentil.
 S použitím kvartilů. decilů a percentilů se často setkáváme při prezentaci výsledků
 antropometrických studií.
  
+\newpage
+\section{LEKCE 02}
+
+V hotelu je ubytováno 185 hostu \\
+Není pravda, že v hotelu je ubytováno 185 hostu \\ \\
+Alespoň 4 zaměstnanci hotelu získají ocenění \\
+Nejvýše 3 zaměstnanci hotelu získají ocenění \\ \\
+Žádný klient hotelu není z Ostravy \\
+Alespoň jeden klient našeho hotelu je z Ostravy \\ \\
+Právě jeden z našich hostů je v sauně \\
+Nikdo z našich hostů není v sauně, nebo jsou tam alespoň dva \\ \\
+Číslo 29 je prvočíslo - výrok, pravdivý \\
+Vltava je nejdelší řeka světa - výrok, nepravdivý \\
+Pro reálná čísla x, y platí x+y=10 - výroková forma \\
+Univerzita Karlova byla založena v roce 1492 - výrok, nepravdivý \\
+Součin dvou libovolných záporných čísel je kladné číslo - výrok, pravdivý \\
+Přímka p je rovnoběžná s přímkou q - výroková forma \\
+Přejí Vám dobrý večer - zdělení \\
+Prezident Václav Havel zemřel v roce 2011 - výrok, pravdivý \\
+Trojúhelník ABC je pravoúhlý - výroková forma \\
+Rozdíl dvou libovolných kladných čísel je kladné číslo - výrok, nepravdivý \\
+
+\begin{table}[h]
+	\centering
+	\resizebox{0.7\textwidth}{!}{%
+		\begin{tabular}{|c|c|c|}
+			\hline
+			\textbf{Operator} & \textbf{Slovní vyjadření}                                                  & \textbf{Symbol} \\ \hline
+			Negace            & není pravda, že                                                            &    $\neg$             \\ \hline
+			Konjunkce         & a, a zaroveň                                                               &    $\wedge$            \\ \hline
+			Disjunkce         & nebo                                                                       &      $\vee$           \\ \hline
+			Implikace         & jestliže...pak                                                             &    $\Rightarrow$             \\ \hline
+			Ekvivalence       & \begin{tabular}[c]{@{}c@{}}právě když, \\ právě tehdy,\\ když\end{tabular} &       $\Leftrightarrow$          \\ \hline
+		\end{tabular}
+	}
+\end{table}
+
+Velký kvantifikator - $\forall$
+
+Malý kvantifikator - $\exists$
+
+\newpage
+\textbf{Příklad}
+
+11, 20, 11, 9, 25, 6, 10, 11, 18, 19, 18
+
+Sort
+
+6  9 10 11 11 11 18 18 19 20 25
+
+Min - 6
+
+Max - 25
+
+Median ($\tilde{x}$) - 11 (středina)
+
+Modus ($\hat{x}$) - 11 (nejčastější číslo)
+
+Aritmetický průměr ($\overline{x}$) - 14.36 (střední) \\
+
+\textbf{Teorie množin}
+
+Množina je takový souhrn objektů, že o 
+každém objektu můžeme rozhodnout, zda patří nebo 
+nepatří do uvažovaného souhrnu objektu \\
+
+Množina - A, B, C
+
+Prvky množiny a, b, c \\
+
+Množiny
+
+Konečné - má konečně mnoho prvků
+
+Nekonečné - počet prvků není konečný
+
+Prázdné - množiny nemají žádný prvek Ø \\
+
+Sjednocení množin A a B je množina prvků, které buď patří 
+do množiny A nebo do množiny b (A $\cup$ B)
+
+Průnik množin A a B je množina těch prvků, které patří oběma množinám A a B (A $\cap$ B)
+
+Rozdíl množin A a B je množina těch prvků, které patří 
+do množiny A, ale nepatří do množiny B (A - B) \\
+
+Karterský součin množin A a B je množina všech 
+uspořádaných dvojic (a, b), takových, že a patří do množiny A a b do množiny B (A x B).
+
+\begin{table}[h]
+	\centering
+	\resizebox{0.4\textwidth}{!}{%
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{}  & \textbf{1} & \textbf{2} & \textbf{3} \\ \hline
+			\textbf{x} & (x, 1)     & (x, 2)     & (x, 3)     \\ \hline
+			\textbf{y} & (y, 1)     & (y, 2)     & (y, 3)     \\ \hline
+			\textbf{z} & (z, 1)     & (z, 2)     & (z, 1)     \\ \hline
+		\end{tabular}
+	}
+\end{table}
 
 
+\newpage
+Přirozená čísla (N) - 1, 2, 3, 4, ...
+
+Celá čísla (Z) - -2, -1, 0, 1, ...
+
+Racionální čísla (Q) - 1/2, 0, 3.6, ...
+
+Iracionální čísla - pi, e, ... \\
+
+Reálná osa
+
+\begin{tikzpicture}
+\draw[-] (-4, 0) -- (4, 0);
+\foreach \x in {-3,-2,-1, 0, 1, 2, 3}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\clip(-1, -1) rectangle (1, 1);
+\end{tikzpicture}
+
+Přímka, na niž je zvolen Počátek jako obraz čísla 0 a jednotka
+
+Každému reálnému číslu potom odpovídá právě jeden bod 
+reálné osy a naopak, každému bodu reálné osy je přiřazeno právě jedno reálné číslo \\
+
+Komplexní čisla (K nebo C)
+
+a+bi
+
+Číslo složené z reálné a imaginární častí
+
+Číselné obory N, Z, Q, R jsou v tomto vzájemném vztahu:
+
+$N \in Z \in Q \in R$ \\
+
+Absolutní hodnota vyjadřuje vzdálenost obrazu čísla na čiselné ose od nuly
+Absolutní hodnota je ve skutečnosti vzdálenost. 
+Stejně jako vzdálenost od bodu na obě strany nemůže 
+být záporná nemůže ani absolutní hodnota být záporná
+
+Interval je každá taková množina reálných čísel, 
+jejichž obrazy na číselné ose vyplňují její souvislou podmnožinu
+
+Rozptyl je průměrná hodnota za součtu 
+čtverců odchylek jednotlivých hodnot souboru od aritmetického průměru
+
+Směrodatná odchylka je kladná hodnota druhé odmocniny rozptylu
+
+Grafické znázornění normálního rozdělení je dáno touto symetrickou 
+jedno-vrcholovou hustotou, která je zvonovitého tvaru a nikde neprotíná vodorovnou osu
+ \\
+
+a $\in$ B, a elementem B
+
+b $\notin $ B, b není elementem B
+
+Uzavřený interval - <a, b>, $a \leq x \leq b$
+
+Otevřený interval - (a, b), $a < x < b$
+
+Zleva otevřený - (a, b>, $a < x \leq b$
+
+Zleva uzavřený - <a, b), $a \leq x < b$
+
+\newpage
+\textbf{Intervaly}
+
+Množinový zápis - ${x \in R; a < x \leq b}$
+
+Pomoci intervalu - (a; b>
+
+Slovní vyjadření \\
+
+\begin{align*}
+\sigma^2 &= \frac{\sum (x_{1} - \overline{x})^2}{n} \\ 
+S^2 &= \frac{\sum x^2 - \dfrac{(\sum x)^2}{n}}{n - 1} \\
+\end{align*}
+
+Odchylka
+
+\begin{align*}
+\sigma &= \sqrt{\frac{\sum x^2_{i}}{n}} - \overline{x}^2 \\
+S &= \sqrt{\frac{\sum x^2 - \dfrac{(\sum x)^2}{n}}{n - 1}}
+\end{align*}
+
+Variabilní coeficient
+
+\[
+V_{k} = \dfrac{S}{\overline{x}} \times 100
+\]
 
 
+$V_{k}$ - variabilní koeficient
 
+S - směrodatná odchylka
 
-
-
-
-
+$\overline{x}$ - aritmetický průměr
 
 
 
@@ -308,11 +499,11 @@ x &= \frac{A}{B} \times y
 \begin{align*}
 A + B &= 110 \\
 A &= B + 100 \\
-(вместо~А~подставляем~B &+ 100~в~первое~уравнение) \\
+%(вместо~А~подставляем~B &+ 100~в~первое~уравнение) \\
 B + 100 + B &= 110 \\
 2B &= 10 \\
 B = \frac{10}{2} &= 5 \\
-(подставляем~ответ~&B~во~второе~уравнение) \\
+%(подставляем~ответ~&B~во~второе~уравнение) \\
 A = 5 + 100 &= 105 \\
 Ответ:
 B = 5; A &= 105;
